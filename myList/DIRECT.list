@@ -20,6 +20,7 @@ DOMAIN-SUFFIX,cdn-qc.content.steamchina.com
 DOMAIN-SUFFIX,cdn-ali.content.steamchina.com
 # Steam非中国大陆地区游戏下载/社区实况直播
 DOMAIN-SUFFIX,steamcontent.com
+DOMAIN,steampipe.akamaized.net
 # Steam国际创意工坊下载CDN
 # DOMAIN-SUFFIX,steamusercontent-a.akamaihd.net
 
