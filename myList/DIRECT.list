@@ -1,5 +1,8 @@
 # qq和发卡平台
 DOMAIN-SUFFIX,qq.com
 DOMAIN,jiema.bai7du.com
+
+#召合api
 DOMAIN,zh2-gwm6.izhaohe.com
+DOMAIN,123.60.137.14
   
