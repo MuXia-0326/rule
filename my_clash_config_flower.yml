@@ -1,6 +1,6 @@
 custom:
-  proxy_groups:
-  - { Proxies:`select`[]HK`[]JP`[]SG`[]TW`[]US`.* }
-  - { Netflix:`select`[]Proxies`[]HK`[]JP`[]SG`[]TW`[]US}
-  rulesets:
-  - {DIRECT: https://raw.githubusercontent.com/MuXia-0326/rule/master/myList/firstDIRECT.list}
+    proxy_groups:
+        - { name: Proxies, type: select, rule: ["[]HK`[]JP`[]SG`[]TW`[]US`.*"] }
+        - { name: Netflix, type: select, rule: ["[]Proxies`[]HK`[]JP`[]SG`[]TW`[]US"] }
+    rulesets:
+        - { ruleset: "https://raw.githubusercontent.com/MuXia-0326/rule/master/myList/firstDIRECT.list", group: "DIRECT" }
