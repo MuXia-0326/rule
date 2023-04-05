@@ -16,7 +16,7 @@ custom:
 
     rulesets:
         # test
-        - { ruleset: "https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/direct.txt", group: "CN" }
+        - { import: "https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/direct.txt", group: "CN" }
 		
 
         # 自用
