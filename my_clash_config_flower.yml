@@ -5,6 +5,7 @@ custom:
         - { name: Netflix, type: select, rule: ["[]Proxies`[]HK`[]JP`[]SG`[]TW`[]US"] }
         - { name: Bahamut, type: select, rule: ["[]Proxies`[]TW"] }
         - { name: Discord, type: select, rule: ["[]Proxies`[]DIRECT`[]HK`[]JP`[]SG`[]TW`[]US"] }
+        - { name: OpenAI, type: select, rule: ["[]JP`[]SG`[]US"] }
         - { name: GamePlatform, type: select, rule: ["[]Proxies`[]DIRECT`[]HK`[]JP`[]SG`[]TW`[]US"] }
         - { name: Final, type: select, rule: ["[]Proxies`[]DIRECT"] }
         - { name: HK, type: select, rule: ["港|HK|Hong Kong`http://www.gstatic.com/generate_204`600"] }
@@ -15,15 +16,12 @@ custom:
         - { name: CN, type: select, rule: ["回国|网易|云音乐|Netease`http://www.gstatic.com/generate_204`600"] }
 
     rulesets:
-        # test
-        - { import: "https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/direct.txt", group: "CN" }
-		
-
         # 自用
         - { ruleset: "https://raw.githubusercontent.com/MuXia-0326/rule/master/myList/firstDIRECT.list", group: "DIRECT" }
         - { ruleset: "https://raw.githubusercontent.com/MuXia-0326/rule/master/myList/DIRECT.list", group: "DIRECT" }
         - { ruleset: "https://raw.githubusercontent.com/MuXia-0326/rule/master/myList/REJECT.list", group: "REJECT" }
         - { ruleset: "https://raw.githubusercontent.com/MuXia-0326/rule/master/myList/googleTranslate.list", group: "Proxies" }
+        - { ruleset: "https://raw.githubusercontent.com/MuXia-0326/rule/master/myList/openAI.list", group: "OpenAI" }
 
         # 开源项目
         ## [必须] Unbreak.list - 用于修正后续规则行为
