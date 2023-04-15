@@ -19,7 +19,7 @@ custom:
     rulesets:
         # 自用
         - { ruleset: "https://raw.githubusercontent.com/MuXia-0326/rule/master/myList/firstDIRECT.list", group: "DIRECT" }
-        - { ruleset: "https://raw.githubusercontent.com/MuXia-0326/rule/master/myList/switch.list", group: "Nintendo" }
+        # - { ruleset: "https://raw.githubusercontent.com/MuXia-0326/rule/master/myList/switch.list", group: "Nintendo" }
         - { ruleset: "https://raw.githubusercontent.com/MuXia-0326/rule/master/myList/DIRECT.list", group: "DIRECT" }
         - { ruleset: "https://raw.githubusercontent.com/MuXia-0326/rule/master/myList/REJECT.list", group: "REJECT" }
         - { ruleset: "https://raw.githubusercontent.com/MuXia-0326/rule/master/myList/googleTranslate.list", group: "Proxies" }
