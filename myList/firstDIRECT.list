@@ -1,7 +1,7 @@
 # 端口
 DST-PORT,22
 
-DOMAIN,aauth-lp1.ndas.srv.nintendo.net
-DOMAIN,nncs1-lp1.n.n.srv.nintendo.net
-DOMAIN,g22306d00-lp1.s.n.srv.nintendo.net
-DOMAIN,dragons.hac.lp1.dragons.nintendo.net
+# DOMAIN,aauth-lp1.ndas.srv.nintendo.net
+# DOMAIN,nncs1-lp1.n.n.srv.nintendo.net
+# DOMAIN,g22306d00-lp1.s.n.srv.nintendo.net
+# DOMAIN,dragons.hac.lp1.dragons.nintendo.net
