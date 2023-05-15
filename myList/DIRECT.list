@@ -8,3 +8,5 @@ DOMAIN,123.60.137.14/10322
 
 DOMAIN-SUFFIX,mossia.xyz
   
+# 必应词典
+DOMAIN,cn.bing.com
