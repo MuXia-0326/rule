@@ -15,4 +15,4 @@ DOMAIN,cn.bing.com
 DOMAIN,xn--4gq62f52gdss.com
 
 # 原型地址
-DOMAIN,files.axshare.com
+DOMAIN-SUFFIX,axshare.com
