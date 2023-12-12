@@ -1,5 +1,5 @@
 # 端口
-# DST-PORT,22
+DST-PORT,22
 
 # DOMAIN,aauth-lp1.ndas.srv.nintendo.net
 # DOMAIN,nncs1-lp1.n.n.srv.nintendo.net
