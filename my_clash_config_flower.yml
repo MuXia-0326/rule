@@ -10,6 +10,7 @@ custom:
         - { name: OpenAI, type: select, rule: ["[]JP`[]SG`[]US"] }
         - { name: GamePlatform, type: select, rule: ["[]Proxies`[]DIRECT`[]HK`[]JP`[]SG`[]TW`[]US"] }
         - { name: Nintendo, type: select, rule: ["[]Proxies`[]DIRECT`[]HK`[]JP`[]SG`[]TW`[]US"] }
+        - { name: Duck, type: select, rule: "鸭子乐园`[]DIRECT"}
         - { name: Final, type: select, rule: ["[]Proxies`[]DIRECT"] }
         - { name: HK, type: select, rule: ["港|HK|Hong Kong`http://www.gstatic.com/generate_204`600"] }
         - {name: JP, type: select, rule: ["日((?!用).)+|[^-]日|东京|大阪|埼玉|JP|Japan`http://www.gstatic.com/generate_204`600"] }
@@ -22,6 +23,7 @@ custom:
     rulesets:
         # 自用
         - { ruleset: "https://raw.githubusercontent.com/MuXia-0326/rule/master/myList/firstDIRECT.list", group: "DIRECT" }
+        - { ruleset: "https://raw.githubusercontent.com/MuXia-0326/rule/master/myList/DST.list", group: "Duck" }
         - { ruleset: "https://raw.githubusercontent.com/MuXia-0326/rule/master/myList/switch.list", group: "Nintendo" }
         - { ruleset: "https://raw.githubusercontent.com/MuXia-0326/rule/master/myList/DIRECT.list", group: "DIRECT" }
         - { ruleset: "https://raw.githubusercontent.com/MuXia-0326/rule/master/myList/REJECT.list", group: "REJECT" }
