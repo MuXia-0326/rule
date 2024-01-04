@@ -1,0 +1,50 @@
+port: 7890
+socks-port: 7891
+redir-port: 7892
+mixed-port: 7893
+allow-lan: false # 允许局域网连接
+mode: Rule # 规则模式
+log-level: info # 日志级别
+ipv6: false # IPv6开关
+
+# 外部控制器
+external-controller: 127.0.0.1:9090
+
+# DNS设置
+dns:
+    enable: false # 禁用系统 DNS
+    ipv6: false # 解析开关 IPv6
+    listen: 0.0.0.0:1053 # DNS 监听
+    default-nameserver: # 常规 DNS
+        - 223.5.5.5
+    nameserver: # 加密 DNS
+        - https://dns.alidns.com/dns-query
+        # - quic://dns.alidns.com   # 如果使用Mihomo（原Clash.Meta内核可以改用这个DNS）
+
+    # 增强模式:fake-ip或redir-host
+    enhanced-mode: fake-ip
+
+    # fake-ip:范围和过滤
+    fake-ip-range: 198.18.0.1/16
+    fake-ip-filter:
+        - '*.lan'
+        - localhost.ptlogin2.qq.com
+        - +.srv.nintendo.net
+        - +.stun.playstation.net
+        - +.msftconnecttest.com
+        - +.msftncsi.com
+        - +.xboxlive.com
+        - msftconnecttest.com
+        - xbox.*.microsoft.com
+        - '*.battlenet.com.cn'
+        - '*.battlenet.com'
+        - '*.blzstatic.cn'
+        - '*.battle.net'
+        - 'time.microsoft.com'
+        - 'time.apple.com'
+    # fallback-filter:      # 回退过滤器
+    #   geoip: true         # GEOIP 启用
+    #   geoip-code: CN      # GEOIP 编码
+    #   ipcidr:             # IPCIDR
+    #     - 240.0.0.0/4
+    #     - 0.0.0.0/32

@@ -1,61 +1,61 @@
 custom:
-    proxy_groups:
-        - { name: Proxies, type: select, rule: ["[]HK`[]JP`[]SG`[]TW`[]US`[]ALL"] }
-        - { name: Bilibili, type: select, rule: ["[]DIRECT`[]HK`[]TW"] }
-        - { name: Netflix, type: select, rule: ["[]Proxies`[]HK`[]JP`[]SG`[]TW`[]US"] }
-        - { name: Bahamut, type: select, rule: ["[]Proxies`[]TW"] }
-        - { name: Youtube, type: select, rule: ["[]Proxies`[]DIRECT`[]HK`[]JP`[]SG`[]TW`[]US"] }
-        - { name: Discord, type: select, rule: ["[]Proxies`[]DIRECT`[]HK`[]JP`[]SG`[]TW`[]US"] }
-        - { name: Microsoft, type: select, rule: ["[]Proxies`[]DIRECT`[]HK`[]JP`[]SG`[]TW`[]US"] }
-        - { name: OpenAI, type: select, rule: ["[]JP`[]SG`[]US"] }
-        - { name: GamePlatform, type: select, rule: ["[]Proxies`[]DIRECT`[]HK`[]JP`[]SG`[]TW`[]US"] }
-        - { name: Nintendo, type: select, rule: ["[]Proxies`[]DIRECT`[]HK`[]JP`[]SG`[]TW`[]US"] }
-        - { name: Duck, type: select, rule: ["[]DST`[]DIRECT"] }
-        - { name: Final, type: select, rule: ["[]Proxies`[]DIRECT"] }
-        - { name: HK, type: select, rule: ["港|HK|Hong Kong`http://www.gstatic.com/generate_204`600"] }
-        - { name: JP, type: select, rule: ["日((?!用).)+|[^-]日|东京|大阪|埼玉|JP|Japan`http://www.gstatic.com/generate_204`600"] }
-        - { name: SG, type: select, rule: ["新|新加坡|狮城|SG|Singapore`http://www.gstatic.com/generate_204`600"] }
-        - { name: TW, type: select, rule: ["台|新北|彰化|TW|Taiwan`http://www.gstatic.com/generate_204`600"] }
-        - { name: US, type: select, rule: ["美|洛杉矶|硅谷|达拉斯|费利蒙|凤凰城|芝加哥|圣何塞|西雅图|US|America|USA`http://www.gstatic.com/generate_204`600"] }
-        - { name: CN, type: select, rule: ["回国|网易|云音乐|Netease`http://www.gstatic.com/generate_204`600"] }
-        - { name: DST, type: select, rule: ["鸭子乐园`http://www.gstatic.com/generate_204`600"] }
-        - { name: ALL, type: select, rule: [".*"] }
+  clash_rule_base: https://raw.githubusercontent.com/MuXia-0326/rule/master/clash-rule/forcerule.yml
 
-    rulesets:
-        # 自用
-        - { ruleset: "https://raw.githubusercontent.com/MuXia-0326/rule/master/myList/firstDIRECT.list", group: "DIRECT" }
-        - { ruleset: "https://raw.githubusercontent.com/MuXia-0326/rule/master/myList/DST.list", group: "Duck" }
-        - { ruleset: "https://raw.githubusercontent.com/MuXia-0326/rule/master/myList/switch.list", group: "Nintendo" }
-        - { ruleset: "https://raw.githubusercontent.com/MuXia-0326/rule/master/myList/DIRECT.list", group: "DIRECT" }
-        - { ruleset: "https://raw.githubusercontent.com/MuXia-0326/rule/master/myList/REJECT.list", group: "REJECT" }
-        - { ruleset: "https://raw.githubusercontent.com/MuXia-0326/rule/master/myList/googleTranslate.list", group: "Proxies" }
-        - { ruleset: "https://raw.githubusercontent.com/MuXia-0326/rule/master/myList/openAI.list", group: "OpenAI" }
+  proxy_groups:
+    - { name: Proxies, type: select, rule: [ '[]HK`[]JP`[]SG`[]TW`[]US`[]ALL' ] }
+    - { name: Bilibili, type: select, rule: [ '[]DIRECT`[]HK`[]TW' ] }
+    - { name: Netflix, type: select, rule: [ '[]Proxies`[]HK`[]JP`[]SG`[]TW`[]US' ] }
+    - { name: Bahamut, type: select, rule: [ '[]Proxies`[]TW' ] }
+    - { name: Youtube, type: select, rule: [ '[]Proxies`[]DIRECT`[]HK`[]JP`[]SG`[]TW`[]US' ] }
+    - { name: Discord, type: select, rule: [ '[]Proxies`[]DIRECT`[]HK`[]JP`[]SG`[]TW`[]US' ] }
+    - { name: Microsoft, type: select, rule: [ '[]Proxies`[]DIRECT`[]HK`[]JP`[]SG`[]TW`[]US' ] }
+    - { name: OpenAI, type: select, rule: [ '[]JP`[]SG`[]US' ] }
+    - { name: GamePlatform, type: select, rule: [ '[]Proxies`[]DIRECT`[]HK`[]JP`[]SG`[]TW`[]US' ] }
+    - { name: Nintendo, type: select, rule: [ '[]Proxies`[]DIRECT`[]HK`[]JP`[]SG`[]TW`[]US' ] }
+    - { name: Final, type: select, rule: [ '[]Proxies`[]DIRECT' ] }
+    - { name: HK, type: select, rule: [ '港|HK|Hong Kong`http://www.gstatic.com/generate_204`600' ] }
+    - { name: JP, type: select, rule: [ '日((?!用).)+|东京|大阪|埼玉|JP|Japan`http://www.gstatic.com/generate_204`600' ] }
+    - { name: SG, type: select, rule: [ '新|新加坡|狮城|SG|Singapore`http://www.gstatic.com/generate_204`600' ] }
+    - { name: TW, type: select, rule: [ '台|新北|彰化|TW|Taiwan`http://www.gstatic.com/generate_204`600' ] }
+    - { name: US, type: select, rule: [ '美|洛杉矶|硅谷|达拉斯|费利蒙|凤凰城|芝加哥|圣何塞|西雅图|US|America|USA`http://www.gstatic.com/generate_204`600' ] }
+    - { name: CN, type: select, rule: [ '回国|网易|云音乐|Netease`http://www.gstatic.com/generate_204`600' ] }
+    - { name: DST, type: select, rule: [ "鸭子乐园`http://www.gstatic.com/generate_204`600" ] }
+    - { name: ALL, type: select, rule: [ '.*' ] }
 
-        # 开源项目
-        ## [必须] Unbreak.list - 用于修正后续规则行为
-        - { ruleset: "https://raw.githubusercontent.com/AGWA5783/Profiles/master/Surge/Ruleset/Unbreak.list", group: "DIRECT" }
-        ## [必须] China.list - 国内网络分流
-        - { ruleset: "https://raw.githubusercontent.com/AGWA5783/Profiles/master/Surge/Ruleset/China.list", group: "DIRECT" }
-        - { ruleset: "https://raw.githubusercontent.com/AGWA5783/Profiles/master/Surge/Ruleset/LocalAreaNetwork.list", group: "DIRECT" }
-        ## [可选] Advertising.list - 广告
-        - { ruleset: "https://raw.githubusercontent.com/AGWA5783/Profiles/master/Surge/Ruleset/Guard/Advertising.list", group: "REJECT" }
-        ## Streaming.list - 流媒体服务
-        - { ruleset: "https://raw.githubusercontent.com/AGWA5783/Profiles/master/Surge/Ruleset/StreamingMedia/Video/Netflix.list", group: "Netflix" }
-        - { ruleset: "https://raw.githubusercontent.com/AGWA5783/Profiles/master/Surge/Ruleset/StreamingMedia/Video/Bahamut.list", group: "Bahamut" }
-        ## StreamingSE.list - （大陆面向国际的）流媒体服务
-        - { ruleset: "https://raw.githubusercontent.com/AGWA5783/Profiles/master/Surge/Ruleset/StreamingMedia/StreamingSE.list", group: "Bilibili" }
-        ## youtube 分流
-        - { ruleset: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/YouTube/YouTube.list", group: "Youtube" }
-        ## discord 分流
-        - { ruleset: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Discord/Discord.list", group: "Discord" }
-        ## Microsoft 分流
-        - { ruleset: "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Microsoft.list", group: "Microsoft" }
-        ## Global.list - 国际网络分流
-        - { ruleset: "https://raw.githubusercontent.com/AGWA5783/Profiles/master/Surge/Ruleset/Global.list", group: "Proxies" }
-        ## 游戏下载分流
-        - { ruleset: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Epic/Epic.list", group: "GamePlatform" }
-        - { ruleset: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Steam/Steam.list", group: "GamePlatform" }
-        # Nintendo代理规则
-        - { ruleset: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Nintendo/Nintendo.list", group: "Nintendo" }
-        - { ruleset: "[]GEOIP,CN", group: "DIRECT" }
-        - { ruleset: "[]MATCH", group: "Proxies" }
+  rulesets:
+    # 自用
+    - { ruleset: 'https://raw.githubusercontent.com/MuXia-0326/rule/master/my-rule/DIRECT.list', group: 'DIRECT' }
+    - { ruleset: 'https://raw.githubusercontent.com/MuXia-0326/rule/master/my-rule/REJECT.list', group: 'REJECT' }
+    - { ruleset: 'https://raw.githubusercontent.com/MuXia-0326/rule/master/my-rule/PROXY.list', group: 'Proxies' }
+    - { ruleset: 'https://raw.githubusercontent.com/MuXia-0326/rule/master/my-rule/group/switch.list', group: 'Nintendo' }
+    - { ruleset: 'https://raw.githubusercontent.com/MuXia-0326/rule/master/my-rule/group/openAI.list', group: 'OpenAI' }
+    - { ruleset: 'https://raw.githubusercontent.com/MuXia-0326/rule/master/my-rule/group/DST.list', group: 'DST' }
+
+    # 开源项目
+    ## [必须] Unbreak.list - 用于修正后续规则行为
+    - { ruleset: 'https://raw.githubusercontent.com/AGWA5783/Profiles/master/Surge/Ruleset/Unbreak.list', group: 'DIRECT' }
+    ## [必须] China.list - 国内网络分流
+    - { ruleset: 'https://raw.githubusercontent.com/AGWA5783/Profiles/master/Surge/Ruleset/China.list', group: 'DIRECT' }
+    - { ruleset: 'https://raw.githubusercontent.com/AGWA5783/Profiles/master/Surge/Ruleset/LocalAreaNetwork.list', group: 'DIRECT' }
+    ## [可选] Advertising.list - 广告
+    - { ruleset: 'https://raw.githubusercontent.com/AGWA5783/Profiles/master/Surge/Ruleset/Guard/Advertising.list', group: 'REJECT' }
+    ## Streaming.list - 流媒体服务
+    - { ruleset: 'https://raw.githubusercontent.com/AGWA5783/Profiles/master/Surge/Ruleset/StreamingMedia/Video/Netflix.list', group: 'Netflix' }
+    - { ruleset: 'https://raw.githubusercontent.com/AGWA5783/Profiles/master/Surge/Ruleset/StreamingMedia/Video/Bahamut.list', group: 'Bahamut' }
+    ## StreamingSE.list - （大陆面向国际的）流媒体服务
+    - { ruleset: 'https://raw.githubusercontent.com/AGWA5783/Profiles/master/Surge/Ruleset/StreamingMedia/StreamingSE.list', group: 'Bilibili' }
+    ## youtube 分流
+    - { ruleset: 'https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/YouTube/YouTube.list', group: 'Youtube' }
+    ## discord 分流
+    - { ruleset: 'https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Discord/Discord.list', group: 'Discord' }
+    ## Microsoft 分流
+    - { ruleset: 'https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Microsoft.list', group: 'Microsoft' }
+    ## Global.list - 国际网络分流
+    - { ruleset: 'https://raw.githubusercontent.com/AGWA5783/Profiles/master/Surge/Ruleset/Global.list', group: 'Proxies' }
+    ## 游戏下载分流
+    - { ruleset: 'https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Epic/Epic.list', group: 'GamePlatform' }
+    - { ruleset: 'https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Steam/Steam.list', group: 'GamePlatform' }
+    # Nintendo代理规则
+    - { ruleset: 'https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Nintendo/Nintendo.list', group: 'Nintendo' }
+    - { ruleset: '[]GEOIP,CN', group: 'DIRECT' }
+    - { ruleset: '[]MATCH', group: 'Proxies' }
