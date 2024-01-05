@@ -18,8 +18,8 @@ dns:
     default-nameserver: # 常规 DNS
         - 223.5.5.5
     nameserver: # 加密 DNS
-        - https://dns.alidns.com/dns-query
-        # - quic://dns.alidns.com   # 如果使用Mihomo（原Clash.Meta内核可以改用这个DNS）
+        #- https://dns.alidns.com/dns-query
+        - quic://dns.alidns.com # 如果使用Mihomo（原Clash.Meta内核可以改用这个DNS）
 
     # 增强模式:fake-ip或redir-host
     enhanced-mode: fake-ip
