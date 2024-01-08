@@ -53,7 +53,7 @@ custom:
     # Nintendo代理规则
     - { ruleset: 'clash-classic:https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Nintendo/Nintendo.yaml', group: 'Nintendo' }
     # CN
-    - { ruleset: 'clash-classic:https://github.com/AkinoYuiko/X/blob/main/Clash/Rules/cncidr.yaml', group: 'DIRECT' }
+    - { ruleset: 'clash-classic:https://raw.githubusercontent.com/AkinoYuiko/X/main/Clash/Rules/cncidr.yaml', group: 'DIRECT' }
     - { ruleset: '[]GEOIP,CN', group: 'DIRECT' }
     # NO_RULES
     - { ruleset: '[]MATCH', group: 'Proxies' }
