@@ -1,0 +1,5 @@
+# 屏蔽网址
+payload:
+    # b站直播相关
+    - DOMAIN,mcdn.bilivideo.cn
+    - DOMAIN,szbdyd.com
