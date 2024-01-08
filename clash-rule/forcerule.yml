@@ -17,12 +17,12 @@ dns:
     listen: 0.0.0.0:1053 # DNS 监听
     default-nameserver: # 常规 DNS
         - 223.5.5.5
-    nameserver: # 加密 DNS
-        #- https://doh.pub/dns-query
-        #- https://dns.alidns.com/dns-query
-        # 如果使用Mihomo（原Clash.Meta内核可以改用这个DNS）
+    # nameserver: # 加密 DNS
+    #- https://doh.pub/dns-query
+    #- https://dns.alidns.com/dns-query
+    # 如果使用Mihomo（原Clash.Meta内核可以改用这个DNS）
+    fallback: # 国外 DNS
         - quic://dns.alidns.com
-    # fallback: # 国外 DNS
     #     - https://dns.google/dns-query
     #     - https://cloudflare-dns.com/dns-query
 
