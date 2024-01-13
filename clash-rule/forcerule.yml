@@ -20,8 +20,8 @@ dns:
     # nameserver: # 加密 DNS
     #- https://doh.pub/dns-query
     #- https://dns.alidns.com/dns-query
-    # 如果使用Mihomo（原Clash.Meta内核可以改用这个DNS）
     fallback: # 国外 DNS
+        # 如果使用Mihomo（原Clash.Meta内核可以改用这个DNS）
         - quic://dns.alidns.com
     #     - https://dns.google/dns-query
     #     - https://cloudflare-dns.com/dns-query
