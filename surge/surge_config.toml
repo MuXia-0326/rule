@@ -39,47 +39,5 @@ group = "Proxies"
 ruleset = "[]MATCH"
 
 [[custom_groups]]
-name = "Proxies"
-type = "select"
-rule = ["[]HK","[]JP","[]SG","[]TW","[]US","[]ALL"]
-[[custom_groups]]
-name = "Bilibili"
-type = "select"
-rule = ["[]DIRECT","[]HK","[]TW"]
-[[custom_groups]]
-name = "Youtube"
-type = "select"
-rule = ["[]Proxies","[]DIRECT","[]HK","[]JP","[]SG","[]TW","[]US"]
-[[custom_groups]]
-name = "Discord"
-type = "select"
-rule = ["[]Proxies","[]DIRECT","[]HK","[]JP","[]SG","[]TW","[]US"]
-[[custom_groups]]
-name = "Microsoft"
-type = "select"
-rule = ["[]Proxies","[]DIRECT","[]HK","[]JP","[]SG","[]TW","[]US"]
-[[custom_groups]]
-name = "OpenAI"
-type = "select"
-rule = ["[]JP","[]SG","[]US"]
-name = "Final"
-type = "select"
-rule = ["[]Proxies","[]DIRECT"]
-name = "HK"
-type = "select"
-rule = ["(港|HK|Hong Kong)"]
-name = "JP"
-type = "select"
-rule = ["(日((?!用).)+|东京|大阪|埼玉|JP|Japan)"]
-name = "SG"
-type = "select"
-rule = ["(新|新加坡|狮城|SG|Singapore)"]
-name = "TW"
-type = "select"
-rule = ["(台|新北|彰化|TW|Taiwan)"]
-name = "US"
-type = "select"
-rule = ["(美|洛杉矶|硅谷|达拉斯|费利蒙|凤凰城|芝加哥|圣何塞|西雅图|US|America|USA)"]
-name = "ALL"
-type = "select"
-rule = [".*"]
+import = "https://raw.githubusercontent.com/MuXia-0326/rule/master/surge/groups/groups.toml"
+
