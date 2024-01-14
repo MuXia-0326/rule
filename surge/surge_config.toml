@@ -1,0 +1,39 @@
+; 自用
+[[rulesets]]
+group = "DIRECT"
+ruleset = "https://raw.githubusercontent.com/MuXia-0326/rule/master/surge/my-rule/DIRECT.list"
+[[rulesets]]
+group = "REJECT"
+ruleset = "https://raw.githubusercontent.com/MuXia-0326/rule/master/surge/my-rule/REJECT.list"
+[[rulesets]]
+group = "Proxies"
+ruleset = "https://raw.githubusercontent.com/MuXia-0326/rule/master/surge/my-rule/PROXY.list"
+[[rulesets]]
+group = "OpenAI"
+ruleset = "https://raw.githubusercontent.com/MuXia-0326/rule/master/surge/my-rule/group/openAI.list"
+
+; 开源
+[[rulesets]]
+group = "DIRECT"
+ruleset = "https://github.com/AkinoYuiko/X/raw/main/Surge/Rules/AdBlock.list"
+[[rulesets]]
+group = "Bilibili"
+ruleset = "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/BiliBili/BiliBili.list"
+[[rulesets]]
+group = "Youtube"
+ruleset = "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/YouTube/YouTube.list"
+[[rulesets]]
+group = "Discord"
+ruleset = "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Discord/Discord.list"
+[[rulesets]]
+group = "Microsoft"
+ruleset = "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Microsoft/Microsoft.list"
+[[rulesets]]
+group = "Proxies"
+ruleset = "https://github.com/AkinoYuiko/X/raw/main/Surge/Rules/Global.list"
+[[rulesets]]
+group = "DIRECT"
+ruleset = "https://github.com/AkinoYuiko/surge-list/raw/main/cncidr.list"
+[[rulesets]]
+group = "Proxies"
+ruleset = "[]MATCH"
