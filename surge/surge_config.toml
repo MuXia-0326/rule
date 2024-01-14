@@ -1,3 +1,6 @@
+[ruleset]
+overwrite_original_rules=true
+
 # 自用
 [[rulesets]]
 group = "DIRECT"
