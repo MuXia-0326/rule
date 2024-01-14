@@ -1,3 +1,7 @@
+# 局域网
+SUBNET,SSID:guigui201_5G,DIRECT
+SUBNET,SSID:guigui201,DIRECT
+
 # 端口
 DST-PORT,22
 DOMAIN-SUFFIX,mossia.xyz
