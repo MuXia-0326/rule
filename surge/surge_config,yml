@@ -1,0 +1,39 @@
+custom:
+    proxy_groups:
+        - { name: Proxies, type: select, rule: ['[]HK`[]JP`[]SG`[]TW`[]US`[]ALL'] }
+        - { name: Bilibili, type: select, rule: ['[]DIRECT`[]HK`[]TW'] }
+        - { name: Youtube, type: select, rule: ['[]Proxies`[]DIRECT`[]HK`[]JP`[]SG`[]TW`[]US'] }
+        - { name: Discord, type: select, rule: ['[]Proxies`[]DIRECT`[]HK`[]JP`[]SG`[]TW`[]US'] }
+        - { name: Microsoft, type: select, rule: ['[]Proxies`[]DIRECT`[]HK`[]JP`[]SG`[]TW`[]US'] }
+        - { name: OpenAI, type: select, rule: ['[]JP`[]SG`[]US'] }
+        - { name: HK, type: select, rule: ['港|HK|Hong Kong'] }
+        - { name: JP, type: select, rule: ['日((?!用).)+|东京|大阪|埼玉|JP|Japan'] }
+        - { name: SG, type: select, rule: ['新|新加坡|狮城|SG|Singapore'] }
+        - { name: TW, type: select, rule: ['台|新北|彰化|TW|Taiwan'] }
+        - { name: US, type: select, rule: ['美|洛杉矶|硅谷|达拉斯|费利蒙|凤凰城|芝加哥|圣何塞|西雅图|US|America|USA'] }
+        - { name: ALL, type: select, rule: ['.*'] }
+
+    rulesets:
+        # 自用
+        - { ruleset: 'https://raw.githubusercontent.com/MuXia-0326/rule/master/surge/my-rule/DIRECT.list', group: 'DIRECT' }
+        - { ruleset: 'https://raw.githubusercontent.com/MuXia-0326/rule/master/surge/my-rule/REJECT.list', group: 'REJECT' }
+        - { ruleset: 'https://raw.githubusercontent.com/MuXia-0326/rule/master/surge/my-rule/PROXY.list', group: 'Proxies' }
+        - { ruleset: 'https://raw.githubusercontent.com/MuXia-0326/rule/master/surge/my-rule/group/openAI.list', group: 'OpenAI' }
+
+        # 开源项目
+        ## 广告
+        - { ruleset: 'https://github.com/AkinoYuiko/X/raw/main/Surge/Rules/AdBlock.list', group: 'REJECT' }
+        ## 哔哩哔哩 分流
+        - { ruleset: 'https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/BiliBili/BiliBili.list', group: 'Bilibili' }
+        ## youtube 分流
+        - { ruleset: 'https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/YouTube/YouTube.list', group: 'Youtube' }
+        ## discord 分流
+        - { ruleset: 'https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Discord/Discord.list', group: 'Discord' }
+        ## Microsoft 分流
+        - { ruleset: 'https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Microsoft/Microsoft.list', group: 'Microsoft' }
+        ## Global.list - 国际网络分流
+        - { ruleset: 'https://github.com/AkinoYuiko/X/raw/main/Surge/Rules/Global.list', group: 'Proxies' }
+        # CN
+        - { ruleset: '[]GEOIP,CN', group: 'DIRECT' }
+        # NO_RULES
+        - { ruleset: '[]MATCH', group: 'Proxies' }
