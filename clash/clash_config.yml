@@ -4,8 +4,6 @@ custom:
   proxy_groups:
     - { name: Proxies, type: select, rule: [ '[]HK`[]JP`[]SG`[]TW`[]US`[]ALL' ] }
     - { name: Bilibili, type: select, rule: [ '[]DIRECT`[]HK`[]TW' ] }
-    - { name: Netflix, type: select, rule: [ '[]Proxies`[]HK`[]JP`[]SG`[]TW`[]US' ] }
-    - { name: Bahamut, type: select, rule: [ '[]Proxies`[]TW' ] }
     - { name: Youtube, type: select, rule: [ '[]Proxies`[]DIRECT`[]HK`[]JP`[]SG`[]TW`[]US' ] }
     - { name: Discord, type: select, rule: [ '[]Proxies`[]DIRECT`[]HK`[]JP`[]SG`[]TW`[]US' ] }
     - { name: Microsoft, type: select, rule: [ '[]Proxies`[]DIRECT`[]HK`[]JP`[]SG`[]TW`[]US' ] }
@@ -34,9 +32,6 @@ custom:
     # 开源项目
     ## 广告
     - { ruleset: 'clash-classic:https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/AdvertisingLite/AdvertisingLite.yaml', group: 'REJECT' }
-    ## 流媒体服务
-    - { ruleset: 'clash-classic:https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Netflix/Netflix.yaml', group: 'Netflix' }
-    - { ruleset: 'clash-classic:https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Bahamut/Bahamut.yaml', group: 'Bahamut' }
     ## 哔哩哔哩 分流
     - { ruleset: 'clash-classic:https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/BiliBili/BiliBili.yaml', group: 'Bilibili' }
     ## youtube 分流
