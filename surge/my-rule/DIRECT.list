@@ -1,6 +1,3 @@
-# 局域网
-SUBNET,SSID:guigui201_5G
-SUBNET,SSID:guigui201
 
 # 端口
 DST-PORT,22
