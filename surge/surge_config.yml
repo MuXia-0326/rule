@@ -15,7 +15,9 @@ custom:
 
     rulesets:
         # 自用
-        - { ruleset: 'surge:https://raw.githubusercontent.com/MuXia-0326/rule/master/surge/my-rule/DIRECT.list', group: 'DIRECT' }
+        - { rule: 'SUBNET,SSID:guigui201_5G', group: 'DIRECT' }
+        - { rule: 'SUBNET,SSID:guigui201', group: 'DIRECT' }
+        - { ruleset: 'https://raw.githubusercontent.com/MuXia-0326/rule/master/surge/my-rule/DIRECT.list', group: 'DIRECT' }
         - { ruleset: 'https://raw.githubusercontent.com/MuXia-0326/rule/master/surge/my-rule/REJECT.list', group: 'REJECT' }
         - { ruleset: 'https://raw.githubusercontent.com/MuXia-0326/rule/master/surge/my-rule/PROXY.list', group: 'Proxies' }
         - { ruleset: 'https://raw.githubusercontent.com/MuXia-0326/rule/master/surge/my-rule/group/openAI.list', group: 'OpenAI' }
