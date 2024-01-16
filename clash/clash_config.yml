@@ -11,9 +11,9 @@ custom:
     - { name: GamePlatform, type: select, rule: [ '[]Proxies`[]DIRECT`[]HK`[]JP`[]SG`[]TW`[]US' ] }
     - { name: Nintendo, type: select, rule: [ '[]Proxies`[]DIRECT`[]HK`[]JP`[]SG`[]TW`[]US' ] }
     - { name: Final, type: select, rule: [ '[]Proxies`[]DIRECT' ] }
-    - { name: HK, type: select, rule: [ '港|HK|Hong Kong`http://www.gstatic.com/generate_204`600' ] }
-    - { name: JP, type: select, rule: [ '日((?!用).)+|东京|大阪|埼玉|JP|Japan`http://www.gstatic.com/generate_204`600' ] }
-    - { name: SG, type: select, rule: [ '新|新加坡|狮城|SG|Singapore`http://www.gstatic.com/generate_204`600' ] }
+    - { name: HK, type: select, rule: [ '香港|港|HK|🇭🇰|(?i)Hong`http://www.gstatic.com/generate_204`600' ] }
+    - { name: JP, type: select, rule: [ '日((?!用).)+|东京|大阪|埼玉|JP|日本|🇯🇵|(?i)Japan`http://www.gstatic.com/generate_204`600' ] }
+    - { name: SG, type: select, rule: [ '新加坡|狮|SG|🇸🇬|(?i)Singapore`http://www.gstatic.com/generate_204`600' ] }
     - { name: TW, type: select, rule: [ '台|新北|彰化|TW|Taiwan`http://www.gstatic.com/generate_204`600' ] }
     - { name: US, type: select, rule: [ '美|洛杉矶|硅谷|达拉斯|费利蒙|凤凰城|芝加哥|圣何塞|西雅图|US|America|USA`http://www.gstatic.com/generate_204`600' ] }
     - { name: CN, type: select, rule: [ '回国|网易|云音乐|Netease`http://www.gstatic.com/generate_204`600' ] }
