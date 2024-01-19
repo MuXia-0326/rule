@@ -27,15 +27,15 @@ custom:
     - { ruleset: 'clash-classic:https://raw.githubusercontent.com/MuXia-0326/rule/master/clash/my-rule/group/DST.yaml', group: 'DST' }
     
     # 饥荒使用下面的规则
-    - { rule: 'DOMAIN,lobby-v2.klei.com', group: 'DIRECT' }
-    - { rule: 'DOMAIN,lobby-v2-cdn.klei.com', group: 'DIRECT' }
-    - { rule: 'DOMAIN,lobby-v2-ap-southeast-1.klei.com', group: 'DIRECT' }
-    - { rule: 'DOMAIN,lobby-v2-ap-east-1.klei.com', group: 'DIRECT' }
-    - { rule: 'DOMAIN,lobby-v2-eu-central-1.klei.com', group: 'DIRECT' }
-    - { rule: 'DOMAIN,lobby-v2-us-east-1.klei.com', group: 'DIRECT' }
-    - { rule: 'DOMAIN-SUFFIX,klei.com', group: 'Proxies' }
-    - { rule: 'DOMAIN-SUFFIX,kleientertainment.com', group: 'Proxies' }
-    - { rule: 'DOMAIN-SUFFIX,cloudfront.net', group: 'Proxies' }
+    # - { rule: 'DOMAIN,lobby-v2.klei.com', group: 'DIRECT' }
+    # - { rule: 'DOMAIN,lobby-v2-cdn.klei.com', group: 'DIRECT' }
+    # - { rule: 'DOMAIN,lobby-v2-ap-southeast-1.klei.com', group: 'DIRECT' }
+    # - { rule: 'DOMAIN,lobby-v2-ap-east-1.klei.com', group: 'DIRECT' }
+    # - { rule: 'DOMAIN,lobby-v2-eu-central-1.klei.com', group: 'DIRECT' }
+    # - { rule: 'DOMAIN,lobby-v2-us-east-1.klei.com', group: 'DIRECT' }
+    # - { rule: 'DOMAIN-SUFFIX,klei.com', group: 'Proxies' }
+    # - { rule: 'DOMAIN-SUFFIX,kleientertainment.com', group: 'Proxies' }
+    # - { rule: 'DOMAIN-SUFFIX,cloudfront.net', group: 'Proxies' }
 
     # 开源项目
     - { ruleset: 'clash-classic:https://raw.githubusercontent.com/Centralmatrix3/Matrix-io/master/Clash/Ruleset/Unbreak.yaml', group: 'DIRECT' }
