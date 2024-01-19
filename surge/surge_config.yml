@@ -4,7 +4,6 @@ custom:
         - { name: CNTV, type: select, rule: [ '[]DIRECT`[]HK`[]TW' ] }
         - { name: Youtube, type: select, rule: ['[]Proxies`[]DIRECT`[]HK`[]JP`[]SG`[]TW`[]US'] }
         - { name: Discord, type: select, rule: ['[]Proxies`[]DIRECT`[]HK`[]JP`[]SG`[]TW`[]US'] }
-        - { name: Microsoft, type: select, rule: ['[]Proxies`[]DIRECT`[]HK`[]JP`[]SG`[]TW`[]US'] }
         - { name: OpenAI, type: select, rule: ['[]JP`[]SG`[]US'] }
         - { name: HK, type: select, rule: ['港|HK|Hong Kong'] }
         - { name: JP, type: select, rule: ['日((?!用).)+|东京|大阪|埼玉|JP|Japan'] }
