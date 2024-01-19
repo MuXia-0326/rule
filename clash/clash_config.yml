@@ -3,14 +3,12 @@ custom:
 
   proxy_groups:
     - { name: Proxies, type: select, rule: [ '[]HK`[]JP`[]SG`[]TW`[]US`[]ALL' ] }
-    - { name: Bilibili, type: select, rule: [ '[]DIRECT`[]HK`[]TW' ] }
+    - { name: CNTV, type: select, rule: [ '[]DIRECT`[]HK`[]TW' ] }
     - { name: Youtube, type: select, rule: [ '[]Proxies`[]DIRECT`[]HK`[]JP`[]SG`[]TW`[]US' ] }
     - { name: Discord, type: select, rule: [ '[]Proxies`[]DIRECT`[]HK`[]JP`[]SG`[]TW`[]US' ] }
-    - { name: Microsoft, type: select, rule: [ '[]Proxies`[]DIRECT`[]HK`[]JP`[]SG`[]TW`[]US' ] }
     - { name: OpenAI, type: select, rule: [ '[]JP`[]SG`[]US' ] }
     - { name: GamePlatform, type: select, rule: [ '[]Proxies`[]DIRECT`[]HK`[]JP`[]SG`[]TW`[]US' ] }
     - { name: Nintendo, type: select, rule: [ '[]Proxies`[]DIRECT`[]HK`[]JP`[]SG`[]TW`[]US' ] }
-    - { name: Final, type: select, rule: [ '[]Proxies`[]DIRECT' ] }
     - { name: HK, type: select, rule: [ '香港|港|HK|🇭🇰|(?i)Hong`http://www.gstatic.com/generate_204`600' ] }
     - { name: JP, type: select, rule: [ '日((?!用).)+|东京|大阪|埼玉|JP|日本|🇯🇵|(?i)Japan`http://www.gstatic.com/generate_204`600' ] }
     - { name: SG, type: select, rule: [ '新加坡|狮|SG|🇸🇬|(?i)Singapore`http://www.gstatic.com/generate_204`600' ] }
@@ -21,33 +19,48 @@ custom:
     - { name: ALL, type: select, rule: [ '.*' ] }
 
   rulesets:
+    # 饥荒使用下面的规则
+    - {rule: 'DOMAIN,lobby-v2.klei.com',group: 'DIRECT'}
+    - {rule: 'DOMAIN,lobby-v2-cdn.klei.com',group: 'DIRECT'}
+    - {rule: 'DOMAIN,lobby-v2-ap-southeast-1.klei.com',group: 'DIRECT'}
+    - {rule: 'DOMAIN,lobby-v2-ap-east-1.klei.com',group: 'DIRECT'}
+    - {rule: 'DOMAIN,lobby-v2-eu-central-1.klei.com',group: 'DIRECT'}
+    - {rule: 'DOMAIN,lobby-v2-us-east-1.klei.com',group: 'DIRECT'}
+    - {rule: 'DOMAIN-SUFFIX,klei.com',group: 'Proxies'}
+    - {rule: 'DOMAIN-SUFFIX,kleientertainment.com',group: 'Proxies'}
+    - {rule: 'DOMAIN-SUFFIX,cloudfront.net',group: 'Proxies'}
+
     # 自用
     - { ruleset: 'clash-classic:https://raw.githubusercontent.com/MuXia-0326/rule/master/clash/my-rule/DIRECT.yaml', group: 'DIRECT' }
     - { ruleset: 'clash-classic:https://raw.githubusercontent.com/MuXia-0326/rule/master/clash/my-rule/REJECT.yaml', group: 'REJECT' }
     - { ruleset: 'clash-classic:https://raw.githubusercontent.com/MuXia-0326/rule/master/clash/my-rule/PROXY.yaml', group: 'Proxies' }
     - { ruleset: 'clash-classic:https://raw.githubusercontent.com/MuXia-0326/rule/master/clash/my-rule/group/switch.yaml', group: 'Nintendo' }
-    - { ruleset: 'clash-classic:https://raw.githubusercontent.com/MuXia-0326/rule/master/clash/my-rule/group/openAI.yaml', group: 'OpenAI' }
     - { ruleset: 'clash-classic:https://raw.githubusercontent.com/MuXia-0326/rule/master/clash/my-rule/group/DST.yaml', group: 'DST' }
 
     # 开源项目
+    - { ruleset: 'clash-classic:https://raw.githubusercontent.com/Centralmatrix3/Matrix-io/master/Clash/Ruleset/Unbreak.yaml', group: 'DIRECT' }
     ## 广告
-    - { ruleset: 'clash-classic:https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/AdvertisingLite/AdvertisingLite.yaml', group: 'REJECT' }
-    ## 哔哩哔哩 分流
-    - { ruleset: 'clash-classic:https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/BiliBili/BiliBili.yaml', group: 'Bilibili' }
+    - { ruleset: 'clash-classic:https://raw.githubusercontent.com/Centralmatrix3/Matrix-io/master/Clash/Ruleset/AdBlock.yaml', group: 'REJECT' }
+    ## 国内媒体分流
+    - { ruleset: 'clash-classic:https://raw.githubusercontent.com/Centralmatrix3/Matrix-io/master/Clash/Ruleset/StreamingCN.yaml', group: 'CNTV' }
+    - { ruleset: 'clash-classic:https://raw.githubusercontent.com/Centralmatrix3/Matrix-io/master/Clash/Ruleset/StreamingSE.yaml', group: 'CNTV' }
     ## youtube 分流
-    - { ruleset: 'clash-classic:https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/YouTube/YouTube.yaml', group: 'Youtube' }
+    - { ruleset: 'clash-classic:https://raw.githubusercontent.com/Centralmatrix3/Matrix-io/master/Clash/Ruleset/YouTube.yaml', group: 'Youtube' }
     ## discord 分流
-    - { ruleset: 'clash-classic:https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Discord/Discord.yaml', group: 'Discord' }
-    ## Microsoft 分流
-    - { ruleset: 'clash-classic:https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Microsoft/Microsoft.yaml', group: 'Microsoft' }
+    - { ruleset: 'clash-classic:https://raw.githubusercontent.com/Centralmatrix3/Matrix-io/master/Clash/Ruleset/Discord.yaml', group: 'Discord' }
+    ## OpenAI 分流
+    - { ruleset: 'clash-classic:https://github.com/Centralmatrix3/Matrix-io/blob/master/Clash/Ruleset/OpenAI.yaml', group: 'OpenAI' }
     ## Global.list - 国际网络分流
-    - { ruleset: 'clash-classic:https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Global/Global.yaml', group: 'Proxies' }
+    - { ruleset: 'clash-classic:https://raw.githubusercontent.com/Centralmatrix3/Matrix-io/master/Clash/Ruleset/Global.yaml', group: 'Proxies' }
     ## 游戏下载分流
-    - { ruleset: 'clash-classic:https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Epic/Epic.yaml', group: 'GamePlatform' }
-    - { ruleset: 'clash-classic:https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Steam/Steam.yaml', group: 'GamePlatform' }
-    # Nintendo代理规则
-    - { ruleset: 'clash-classic:https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Nintendo/Nintendo.yaml', group: 'Nintendo' }
-    # CN
+    - { ruleset: 'clash-classic:https://raw.githubusercontent.com/Centralmatrix3/Matrix-io/master/Clash/Ruleset/Steam.yaml', group: 'GamePlatform' }
+    - { ruleset: 'clash-classic:https://raw.githubusercontent.com/Centralmatrix3/Matrix-io/master/Clash/Ruleset/SteamCN.yaml', group: 'GamePlatform' }
+    - { ruleset: 'clash-classic:https://raw.githubusercontent.com/Centralmatrix3/Matrix-io/master/Clash/Ruleset/Epic.yaml', group: 'GamePlatform' }
+    ## Nintendo代理规则
+    - { ruleset: 'clash-classic:https://raw.githubusercontent.com/Centralmatrix3/Matrix-io/master/Clash/Ruleset/Nintendo.yaml', group: 'Nintendo' }
+    ## 局域网
+    - { ruleset: 'clash-classic:https://raw.githubusercontent.com/Centralmatrix3/Matrix-io/master/Clash/Ruleset/LAN.yaml', group: 'DIRECT' }
+    ## CN
     - { ruleset: '[]GEOIP,CN', group: 'DIRECT' }
-    # NO_RULES
+    ## NO_RULES
     - { ruleset: '[]MATCH', group: 'Proxies' }

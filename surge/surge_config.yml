@@ -1,7 +1,7 @@
 custom:
     proxy_groups:
         - { name: Proxies, type: select, rule: ['[]HK`[]JP`[]SG`[]TW`[]US`[]ALL'] }
-        - { name: Bilibili, type: select, rule: ['[]DIRECT`[]HK`[]TW'] }
+        - { name: CNTV, type: select, rule: [ '[]DIRECT`[]HK`[]TW' ] }
         - { name: Youtube, type: select, rule: ['[]Proxies`[]DIRECT`[]HK`[]JP`[]SG`[]TW`[]US'] }
         - { name: Discord, type: select, rule: ['[]Proxies`[]DIRECT`[]HK`[]JP`[]SG`[]TW`[]US'] }
         - { name: Microsoft, type: select, rule: ['[]Proxies`[]DIRECT`[]HK`[]JP`[]SG`[]TW`[]US'] }
@@ -20,21 +20,22 @@ custom:
         - { ruleset: 'https://raw.githubusercontent.com/MuXia-0326/rule/master/surge/my-rule/DIRECT.list', group: 'DIRECT' }
         - { ruleset: 'https://raw.githubusercontent.com/MuXia-0326/rule/master/surge/my-rule/REJECT.list', group: 'REJECT' }
         - { ruleset: 'https://raw.githubusercontent.com/MuXia-0326/rule/master/surge/my-rule/PROXY.list', group: 'Proxies' }
-        - { ruleset: 'https://raw.githubusercontent.com/MuXia-0326/rule/master/surge/my-rule/group/openAI.list', group: 'OpenAI' }
-
+  
         # 开源项目
+        - { ruleset: 'clash-classic:https://raw.githubusercontent.com/Centralmatrix3/Matrix-io/master/Clash/Ruleset/Unbreak.yaml', group: 'DIRECT' }
         ## 广告
-        - { ruleset: 'https://github.com/AkinoYuiko/X/raw/main/Surge/Rules/AdBlock.list', group: 'REJECT' }
-        ## 哔哩哔哩 分流
-        - { ruleset: 'https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/BiliBili/BiliBili.list', group: 'Bilibili' }
+        - { ruleset: 'clash-classic:https://raw.githubusercontent.com/Centralmatrix3/Matrix-io/master/Clash/Ruleset/AdBlock.yaml', group: 'REJECT' }
+        ## 国内媒体分流
+        - { ruleset: 'clash-classic:https://raw.githubusercontent.com/Centralmatrix3/Matrix-io/master/Clash/Ruleset/StreamingCN.yaml', group: 'CNTV' }
+        - { ruleset: 'clash-classic:https://raw.githubusercontent.com/Centralmatrix3/Matrix-io/master/Clash/Ruleset/StreamingSE.yaml', group: 'CNTV' }
         ## youtube 分流
-        - { ruleset: 'https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/YouTube/YouTube.list', group: 'Youtube' }
+        - { ruleset: 'clash-classic:https://raw.githubusercontent.com/Centralmatrix3/Matrix-io/master/Clash/Ruleset/YouTube.yaml', group: 'Youtube' }
         ## discord 分流
-        - { ruleset: 'https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Discord/Discord.list', group: 'Discord' }
-        ## Microsoft 分流
-        - { ruleset: 'https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Microsoft/Microsoft.list', group: 'Microsoft' }
+        - { ruleset: 'clash-classic:https://raw.githubusercontent.com/Centralmatrix3/Matrix-io/master/Clash/Ruleset/Discord.yaml', group: 'Discord' }
+        ## OpenAI 分流
+        - { ruleset: 'clash-classic:https://github.com/Centralmatrix3/Matrix-io/blob/master/Clash/Ruleset/OpenAI.yaml', group: 'OpenAI' }
         ## Global.list - 国际网络分流
-        - { ruleset: 'https://github.com/AkinoYuiko/X/raw/main/Surge/Rules/Global.list', group: 'Proxies' }
+        - { ruleset: 'clash-classic:https://raw.githubusercontent.com/Centralmatrix3/Matrix-io/master/Clash/Ruleset/Global.yaml', group: 'Proxies' }
         # CN
         - { ruleset: '[]GEOIP,CN', group: 'DIRECT' }
         # NO_RULES

@@ -10,8 +10,5 @@ payload:
     # 必应词典
     - DOMAIN,cn.bing.com
 
-    # 一元机场
-    - DOMAIN,xn--4gq62f52gdss.com
-
     # 原型地址
     - DOMAIN-SUFFIX,axshare.com

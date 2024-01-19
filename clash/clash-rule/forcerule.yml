@@ -8,11 +8,11 @@ log-level: info # 日志级别
 ipv6: false # IPv6开关
 
 # 外部控制器
-external-controller: 127.0.0.1:9090
+external-controller: :9090
 
 # DNS设置
 dns:
-    enable: false # 禁用系统 DNS
+    enable: true # 禁用系统 DNS
     ipv6: false # 解析开关 IPv6
     listen: 0.0.0.0:1053 # DNS 监听
     default-nameserver: # 常规 DNS
