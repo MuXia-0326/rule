@@ -28,6 +28,7 @@ custom:
     
     # test
     - { rule: 'AND,((SRC-IP-CIDR,192.168.31.31/32),(DOMAIN,lobby-v2.klei.com))', group: 'DIRECT' }
+    - { rule: 'AND,((SRC-IP-CIDR,192.168.31.31/32))', group: 'DIRECT' }
     
     # 饥荒使用下面的规则
     # - { rule: 'DOMAIN,lobby-v2.klei.com', group: 'DIRECT' }
