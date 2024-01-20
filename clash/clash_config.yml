@@ -26,6 +26,9 @@ custom:
     - { ruleset: 'clash-classic:https://raw.githubusercontent.com/MuXia-0326/rule/master/clash/my-rule/group/switch.yaml', group: 'Nintendo' }
     - { ruleset: 'clash-classic:https://raw.githubusercontent.com/MuXia-0326/rule/master/clash/my-rule/group/DST.yaml', group: 'DST' }
     
+    # test
+    - { rule: 'AND,((SRC-IP-CIDR,192.168.31.31/32),(DOMAIN,lobby-v2.klei.com))', group: 'DIRECT' }
+    
     # 饥荒使用下面的规则
     # - { rule: 'DOMAIN,lobby-v2.klei.com', group: 'DIRECT' }
     # - { rule: 'DOMAIN,lobby-v2-cdn.klei.com', group: 'DIRECT' }
