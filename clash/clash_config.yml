@@ -21,15 +21,15 @@ custom:
   rulesets:
     # mihomo 特有的逻辑规则
     # 饥荒服务器使用下面的规则
-    - { rule: 'AND,((SRC-IP-CIDR,192.168.31.31/32),(DOMAIN,lobby-v2.klei.com))', group: 'DIRECT' }
-    - { rule: 'AND,((SRC-IP-CIDR,192.168.31.31/32),(DOMAIN,lobby-v2-cdn.klei.com))', group: 'DIRECT' }
-    - { rule: 'AND,((SRC-IP-CIDR,192.168.31.31/32),(DOMAIN,lobby-v2-ap-southeast-1.klei.com))', group: 'DIRECT' }
-    - { rule: 'AND,((SRC-IP-CIDR,192.168.31.31/32),(DOMAIN,lobby-v2-ap-east-1.klei.com))', group: 'DIRECT' }
-    - { rule: 'AND,((SRC-IP-CIDR,192.168.31.31/32),(DOMAIN,lobby-v2-eu-central-1.klei.com))', group: 'DIRECT' }
-    - { rule: 'AND,((SRC-IP-CIDR,192.168.31.31/32),(DOMAIN,lobby-v2-us-east-1.klei.com))', group: 'DIRECT' }
-    - { rule: 'AND,((SRC-IP-CIDR,192.168.31.31/32),(DOMAIN-SUFFIX,klei.com))', group: 'Proxies' }
-    - { rule: 'AND,((SRC-IP-CIDR,192.168.31.31/32),(DOMAIN-SUFFIX,kleientertainment.com))', group: 'Proxies' }
-    - { rule: 'AND,((SRC-IP-CIDR,192.168.31.31/32),(DOMAIN-SUFFIX,cloudfront.net))', group: 'Proxies' }
+    # - { rule: 'AND,((SRC-IP-CIDR,192.168.31.31/32),(DOMAIN,lobby-v2.klei.com))', group: 'DIRECT' }
+    # - { rule: 'AND,((SRC-IP-CIDR,192.168.31.31/32),(DOMAIN,lobby-v2-cdn.klei.com))', group: 'DIRECT' }
+    # - { rule: 'AND,((SRC-IP-CIDR,192.168.31.31/32),(DOMAIN,lobby-v2-ap-southeast-1.klei.com))', group: 'DIRECT' }
+    # - { rule: 'AND,((SRC-IP-CIDR,192.168.31.31/32),(DOMAIN,lobby-v2-ap-east-1.klei.com))', group: 'DIRECT' }
+    # - { rule: 'AND,((SRC-IP-CIDR,192.168.31.31/32),(DOMAIN,lobby-v2-eu-central-1.klei.com))', group: 'DIRECT' }
+    # - { rule: 'AND,((SRC-IP-CIDR,192.168.31.31/32),(DOMAIN,lobby-v2-us-east-1.klei.com))', group: 'DIRECT' }
+    # - { rule: 'AND,((SRC-IP-CIDR,192.168.31.31/32),(DOMAIN-SUFFIX,klei.com))', group: 'Proxies' }
+    # - { rule: 'AND,((SRC-IP-CIDR,192.168.31.31/32),(DOMAIN-SUFFIX,kleientertainment.com))', group: 'Proxies' }
+    # - { rule: 'AND,((SRC-IP-CIDR,192.168.31.31/32),(DOMAIN-SUFFIX,cloudfront.net))', group: 'Proxies' }
     
     # 自用
     - { ruleset: 'clash-classic:https://raw.githubusercontent.com/MuXia-0326/rule/master/clash/my-rule/DIRECT.yaml', group: 'DIRECT' }
