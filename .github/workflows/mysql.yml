@@ -22,7 +22,7 @@ jobs:
             - name: Run a script
               run: |
                   node -e "
-                  var mysql      = require('mysql');
+                  var mysql      = require('mysql2');
                   var connection = mysql.createConnection({
                     host     : '${{ secrets.MYSQL_HOST }}',
                     user     : '${{ secrets.MYSQL_USER }}',
