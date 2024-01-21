@@ -6,6 +6,7 @@ custom:
     - { name: CNTV, type: select, rule: [ '[]DIRECT`[]HK`[]TW' ] }
     - { name: Youtube, type: select, rule: [ '[]Proxies`[]DIRECT`[]HK`[]JP`[]SG`[]TW`[]US' ] }
     - { name: Discord, type: select, rule: [ '[]Proxies`[]DIRECT`[]HK`[]JP`[]SG`[]TW`[]US' ] }
+    - { name: Telegram, type: select, rule: [ '实验性|日用`[]Proxies' ] }
     - { name: OpenAI, type: select, rule: [ '[]JP`[]SG`[]US' ] }
     - { name: GamePlatform, type: select, rule: [ '[]Proxies`[]DIRECT`[]HK`[]JP`[]SG`[]TW`[]US' ] }
     - { name: Nintendo, type: select, rule: [ '[]Proxies`[]DIRECT`[]HK`[]JP`[]SG`[]TW`[]US' ] }
@@ -49,6 +50,8 @@ custom:
     - { ruleset: 'clash-classic:https://raw.githubusercontent.com/Centralmatrix3/Matrix-io/master/Clash/Ruleset/YouTube.yaml', group: 'Youtube' }
     ## discord 分流
     - { ruleset: 'clash-classic:https://raw.githubusercontent.com/Centralmatrix3/Matrix-io/master/Clash/Ruleset/Discord.yaml', group: 'Discord' }
+    ## Telegram 分流
+    - { ruleset: 'clash-classic:https://raw.githubusercontent.com/Centralmatrix3/Matrix-io/master/Clash/Ruleset/Telegram.yaml', group: 'Telegram' }
     ## OpenAI 分流
     - { ruleset: 'clash-classic:https://github.com/Centralmatrix3/Matrix-io/blob/master/Clash/Ruleset/OpenAI.yaml', group: 'OpenAI' }
     ## Global.list - 国际网络分流
