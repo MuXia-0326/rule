@@ -1,0 +1,52 @@
+custom:
+  clash_rule_base: https://raw.githubusercontent.com/MuXia-0326/rule/master/clash/clash-rule/forcerule.yml
+
+  proxy_groups:
+    - { name: Proxies, type: select, rule: [ '.*' ] }
+    - { name: DST, type: select, rule: [ '[]DIRECT`鸭子乐园`http://www.gstatic.com/generate_204`600' ] }
+
+  rulesets:
+    # mihomo 特有的逻辑规则
+    # 饥荒服务器使用下面的规则
+    # - { rule: 'AND,((SRC-IP-CIDR,192.168.31.31/32),(DOMAIN,lobby-v2.klei.com))', group: 'DIRECT' }
+    # - { rule: 'AND,((SRC-IP-CIDR,192.168.31.31/32),(DOMAIN,lobby-v2-cdn.klei.com))', group: 'DIRECT' }
+    # - { rule: 'AND,((SRC-IP-CIDR,192.168.31.31/32),(DOMAIN,lobby-v2-ap-southeast-1.klei.com))', group: 'DIRECT' }
+    # - { rule: 'AND,((SRC-IP-CIDR,192.168.31.31/32),(DOMAIN,lobby-v2-ap-east-1.klei.com))', group: 'DIRECT' }
+    # - { rule: 'AND,((SRC-IP-CIDR,192.168.31.31/32),(DOMAIN,lobby-v2-eu-central-1.klei.com))', group: 'DIRECT' }
+    # - { rule: 'AND,((SRC-IP-CIDR,192.168.31.31/32),(DOMAIN,lobby-v2-us-east-1.klei.com))', group: 'DIRECT' }
+    # - { rule: 'AND,((SRC-IP-CIDR,192.168.31.31/32),(DOMAIN-SUFFIX,klei.com))', group: 'Proxies' }
+    # - { rule: 'AND,((SRC-IP-CIDR,192.168.31.31/32),(DOMAIN-SUFFIX,kleientertainment.com))', group: 'Proxies' }
+    # - { rule: 'AND,((SRC-IP-CIDR,192.168.31.31/32),(DOMAIN-SUFFIX,cloudfront.net))', group: 'Proxies' }
+    
+    # 自用
+    - { ruleset: 'clash-classic:https://raw.githubusercontent.com/MuXia-0326/rule/master/clash/my-rule/DIRECT.yaml', group: 'DIRECT' }
+    - { ruleset: 'clash-classic:https://raw.githubusercontent.com/MuXia-0326/rule/master/clash/my-rule/REJECT.yaml', group: 'REJECT' }
+    - { ruleset: 'clash-classic:https://raw.githubusercontent.com/MuXia-0326/rule/master/clash/my-rule/PROXY.yaml', group: 'Proxies' }
+    - { ruleset: 'clash-classic:https://raw.githubusercontent.com/MuXia-0326/rule/master/clash/my-rule/group/DST.yaml', group: 'DST' }
+
+    # 开源项目
+    - { ruleset: 'clash-classic:https://raw.githubusercontent.com/Centralmatrix3/Matrix-io/master/Clash/Ruleset/Unbreak.yaml', group: 'DIRECT' }
+    ## 广告
+    - { ruleset: 'clash-classic:https://raw.githubusercontent.com/Centralmatrix3/Matrix-io/master/Clash/Ruleset/AdBlock.yaml', group: 'REJECT' }
+    ## 国内媒体分流
+    - { ruleset: 'clash-classic:https://raw.githubusercontent.com/Centralmatrix3/Matrix-io/master/Clash/Ruleset/StreamingCN.yaml', group: 'DIRECT' }
+    - { ruleset: 'clash-classic:https://raw.githubusercontent.com/Centralmatrix3/Matrix-io/master/Clash/Ruleset/StreamingSE.yaml', group: 'DIRECT' }
+    ## youtube 分流
+    - { ruleset: 'clash-classic:https://raw.githubusercontent.com/Centralmatrix3/Matrix-io/master/Clash/Ruleset/YouTube.yaml', group: 'Proxies' }
+    ## discord 分流
+    - { ruleset: 'clash-classic:https://raw.githubusercontent.com/Centralmatrix3/Matrix-io/master/Clash/Ruleset/Discord.yaml', group: 'Proxies' }
+    ## Telegram 分流
+    - { ruleset: 'clash-classic:https://raw.githubusercontent.com/Centralmatrix3/Matrix-io/master/Clash/Ruleset/Telegram.yaml', group: 'Proxies' }
+    ## OpenAI 分流
+    - { ruleset: 'clash-classic:https://github.com/Centralmatrix3/Matrix-io/blob/master/Clash/Ruleset/OpenAI.yaml', group: 'Proxies' }
+    ## Global.list - 国际网络分流
+    - { ruleset: 'clash-classic:https://raw.githubusercontent.com/Centralmatrix3/Matrix-io/master/Clash/Ruleset/Global.yaml', group: 'Proxies' }
+    ## 游戏下载分流
+    - { ruleset: 'clash-classic:https://raw.githubusercontent.com/Centralmatrix3/Matrix-io/master/Clash/Ruleset/Steam.yaml', group: 'Proxies' }
+    - { ruleset: 'clash-classic:https://raw.githubusercontent.com/Centralmatrix3/Matrix-io/master/Clash/Ruleset/Epic.yaml', group: 'Proxies' }
+    ## 局域网
+    - { ruleset: 'clash-classic:https://raw.githubusercontent.com/Centralmatrix3/Matrix-io/master/Clash/Ruleset/LAN.yaml', group: 'DIRECT' }
+    ## CN
+    - { ruleset: '[]GEOIP,CN', group: 'DIRECT' }
+    ## NO_RULES
+    - { ruleset: '[]MATCH', group: 'Proxies' }
