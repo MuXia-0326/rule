@@ -15,17 +15,11 @@ dns:
     enable: true # 禁用系统 DNS
     ipv6: false # 解析开关 IPv6
     listen: 0.0.0.0:1053 # DNS 监听
-    default-nameserver: # 常规 DNS
-        - 223.5.5.5
     nameserver:
         - quic://223.5.5.5
         - quic://223.6.6.6
-    fallback: # 国外 DNS
-        - quic://dns.alidns.com
-
     # 增强模式:fake-ip或redir-host
     enhanced-mode: fake-ip
-
     # fake-ip:范围和过滤
     fake-ip-range: 198.18.0.1/16
     fake-ip-filter:
