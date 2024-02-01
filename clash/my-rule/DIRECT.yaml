@@ -1,7 +1,6 @@
 payload:
     # 端口
     - DST-PORT,22
-    - DOMAIN-SUFFIX,mossia.xyz
 
     # qq和发卡平台
     # - DOMAIN-SUFFIX,qq.com

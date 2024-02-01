@@ -1,3 +1,0 @@
-#openai 单独走代理
-payload:
-    - DOMAIN-SUFFIX,openai.com
