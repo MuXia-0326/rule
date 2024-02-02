@@ -1,16 +1,18 @@
 custom:
     proxy_groups:
-        - { name: Proxies, type: select, rule: ['[]HK`[]JP`[]SG`[]TW`[]US`[]ALL'] }
+        - { name: Proxies, type: select, rule: ['[]HK`[]JP`[]SG`[]TW`[]US`[]OTHER'] }
         - { name: CNTV, type: select, rule: [ '[]DIRECT`[]HK`[]TW' ] }
         - { name: Youtube, type: select, rule: ['[]Proxies`[]DIRECT`[]HK`[]JP`[]SG`[]TW`[]US'] }
         - { name: Discord, type: select, rule: ['[]Proxies`[]DIRECT`[]HK`[]JP`[]SG`[]TW`[]US'] }
+        - { name: Telegram, type: select, rule: [ '实验性|日用`[]Proxies' ] }
         - { name: OpenAI, type: select, rule: ['[]JP`[]SG`[]US'] }
-        - { name: HK, type: select, rule: ['港|HK|Hong Kong'] }
-        - { name: JP, type: select, rule: ['日((?!用).)+|东京|大阪|埼玉|JP|Japan'] }
-        - { name: SG, type: select, rule: ['新|新加坡|狮城|SG|Singapore'] }
-        - { name: TW, type: select, rule: ['台|新北|彰化|TW|Taiwan'] }
-        - { name: US, type: select, rule: ['美|洛杉矶|硅谷|达拉斯|费利蒙|凤凰城|芝加哥|圣何塞|西雅图|US|America|USA'] }
-        - { name: ALL, type: select, rule: ['.*'] }
+        - { name: HK, type: select, rule: [ '香港|HK|🇭🇰`http://www.gstatic.com/generate_204`600' ] }
+        - { name: JP, type: select, rule: [ '日本|JP|🇯🇵`http://www.gstatic.com/generate_204`600' ] }
+        - { name: SG, type: select, rule: [ '新加坡|狮城|SG|🇸🇬`http://www.gstatic.com/generate_204`600' ] }
+        - { name: TW, type: select, rule: [ '台湾|TW|Taiwan`http://www.gstatic.com/generate_204`600' ] }
+        - { name: US, type: select, rule: [ '美国|US|🇺🇸`http://www.gstatic.com/generate_204`600' ] }
+        - { name: DST, type: select, rule: [ '[]DIRECT`鸭子乐园`http://www.gstatic.com/generate_204`600' ] }
+        - { name: OTHER, type: select, rule: [ '^(?!.*(香港|HK|🇭🇰|日本|JP|🇯🇵|新加坡|狮城|SG|🇸🇬|台湾|TW|Taiwan|美国|US|🇺🇸|鸭子乐园)).*' ] }
 
     rulesets:
         # 自用
@@ -31,11 +33,13 @@ custom:
         - { ruleset: 'clash-classic:https://raw.githubusercontent.com/Centralmatrix3/Matrix-io/master/Clash/Ruleset/YouTube.yaml', group: 'Youtube' }
         ## discord 分流
         - { ruleset: 'clash-classic:https://raw.githubusercontent.com/Centralmatrix3/Matrix-io/master/Clash/Ruleset/Discord.yaml', group: 'Discord' }
+        ## Telegram 分流
+        - { ruleset: 'clash-classic:https://raw.githubusercontent.com/Centralmatrix3/Matrix-io/master/Clash/Ruleset/Telegram.yaml', group: 'Telegram' }
         ## OpenAI 分流
         - { ruleset: 'clash-classic:https://raw.githubusercontent.com/Centralmatrix3/Matrix-io/master/Clash/Ruleset/OpenAI.yaml', group: 'OpenAI' }
         ## Global.list - 国际网络分流
         - { ruleset: 'clash-classic:https://raw.githubusercontent.com/Centralmatrix3/Matrix-io/master/Clash/Ruleset/Global.yaml', group: 'Proxies' }
         # CN
-        - { ruleset: '[]GEOIP,CN', group: 'DIRECT' }
+        - { ruleset: '[]GEOIP', group: 'DIRECT' }
         # NO_RULES
         - { ruleset: '[]MATCH', group: 'Proxies' }
