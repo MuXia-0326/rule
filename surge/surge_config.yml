@@ -11,7 +11,6 @@ custom:
         - { name: SG, type: select, rule: [ '新加坡|狮城|SG|🇸🇬`http://www.gstatic.com/generate_204`600' ] }
         - { name: TW, type: select, rule: [ '台湾|TW|Taiwan`http://www.gstatic.com/generate_204`600' ] }
         - { name: US, type: select, rule: [ '美国|US|🇺🇸`http://www.gstatic.com/generate_204`600' ] }
-        - { name: DST, type: select, rule: [ '[]DIRECT`鸭子乐园`http://www.gstatic.com/generate_204`600' ] }
         - { name: OTHER, type: select, rule: [ '^(?!.*(香港|HK|🇭🇰|日本|JP|🇯🇵|新加坡|狮城|SG|🇸🇬|台湾|TW|Taiwan|美国|US|🇺🇸|鸭子乐园)).*' ] }
 
     rulesets:
