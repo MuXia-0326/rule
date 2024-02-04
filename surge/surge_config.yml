@@ -39,6 +39,6 @@ custom:
         ## Global.list - 国际网络分流
         - { ruleset: 'clash-classic:https://raw.githubusercontent.com/Centralmatrix3/Matrix-io/master/Clash/Ruleset/Global.yaml', group: 'Proxies' }
         # CN
-        - { ruleset: '[]GEOIP', group: 'DIRECT' }
+        - { ruleset: '[]GEOIP,CN', group: 'DIRECT' }
         # NO_RULES
         - { ruleset: '[]MATCH', group: 'Proxies' }
