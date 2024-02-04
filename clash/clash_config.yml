@@ -63,6 +63,6 @@ custom:
     ## 局域网
     - { ruleset: 'clash-classic:https://raw.githubusercontent.com/Centralmatrix3/Matrix-io/master/Clash/Ruleset/LAN.yaml', group: 'DIRECT' }
     ## CN
-    - { ruleset: '[]GEOIP', group: 'DIRECT' }
+    - { ruleset: '[]GEOIP,CN', group: 'DIRECT' }
     ## NO_RULES
     - { ruleset: '[]MATCH', group: 'Proxies' }
