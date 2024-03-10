@@ -12,35 +12,6 @@ custom:
     - { name: OTHER, type: select, rule: [ '^(?!.*(香港|HK|🇭🇰|日本|JP|🇯🇵|新加坡|狮城|SG|🇸🇬|台湾|TW|Taiwan|美国|US|🇺🇸|鸭子乐园)).*' ] }
 
   rulesets:
-    # 自用
-    - { ruleset: 'clash-classic:https://raw.githubusercontent.com/MuXia-0326/rule/master/clash/my-rule/DIRECT.yaml', group: 'DIRECT' }
-    - { ruleset: 'clash-classic:https://raw.githubusercontent.com/MuXia-0326/rule/master/clash/my-rule/REJECT.yaml', group: 'REJECT' }
-    - { ruleset: 'clash-classic:https://raw.githubusercontent.com/MuXia-0326/rule/master/clash/my-rule/PROXY.yaml', group: 'Proxies' }
-    - { ruleset: 'clash-classic:https://raw.githubusercontent.com/MuXia-0326/rule/master/clash/my-rule/group/switch.yaml', group: 'Proxies' }
-    - { ruleset: 'clash-classic:https://raw.githubusercontent.com/MuXia-0326/rule/master/clash/my-rule/group/DST.yaml', group: 'DST' }
-
-    # 开源项目
-    - { ruleset: 'clash-classic:https://raw.githubusercontent.com/Centralmatrix3/Matrix-io/master/Clash/Ruleset/Unbreak.yaml', group: 'DIRECT' }
-    ## 广告
-    - { ruleset: 'clash-classic:https://raw.githubusercontent.com/Centralmatrix3/Matrix-io/master/Clash/Ruleset/AdBlock.yaml', group: 'REJECT' }
-    ## youtube 分流
-    - { ruleset: 'clash-classic:https://raw.githubusercontent.com/Centralmatrix3/Matrix-io/master/Clash/Ruleset/YouTube.yaml', group: 'Proxies' }
-    ## discord 分流
-    - { ruleset: 'clash-classic:https://raw.githubusercontent.com/Centralmatrix3/Matrix-io/master/Clash/Ruleset/Discord.yaml', group: 'Proxies' }
-    ## Telegram 分流
-    - { ruleset: 'clash-classic:https://raw.githubusercontent.com/Centralmatrix3/Matrix-io/master/Clash/Ruleset/Telegram.yaml', group: 'Proxies' }
-    ## OpenAI 分流
-    - { ruleset: 'clash-classic:https://raw.githubusercontent.com/Centralmatrix3/Matrix-io/master/Clash/Ruleset/OpenAI.yaml', group: 'Proxies' }
-    ## Global.list - 国际网络分流
-    - { ruleset: 'clash-classic:https://raw.githubusercontent.com/Centralmatrix3/Matrix-io/master/Clash/Ruleset/Global.yaml', group: 'Proxies' }
-    ## 游戏下载分流
-    - { ruleset: 'clash-classic:https://raw.githubusercontent.com/Centralmatrix3/Matrix-io/master/Clash/Ruleset/Steam.yaml', group: 'Proxies' }
-    - { ruleset: 'clash-classic:https://raw.githubusercontent.com/Centralmatrix3/Matrix-io/master/Clash/Ruleset/Epic.yaml', group: 'Proxies' }
-    ## Nintendo代理规则
-    - { ruleset: 'clash-classic:https://raw.githubusercontent.com/Centralmatrix3/Matrix-io/master/Clash/Ruleset/Nintendo.yaml', group: 'Proxies' }
-    ## 局域网
-    - { ruleset: 'clash-classic:https://raw.githubusercontent.com/Centralmatrix3/Matrix-io/master/Clash/Ruleset/LAN.yaml', group: 'DIRECT' }
-    ## CN
-    - { ruleset: '[]GEOIP,CN', group: 'DIRECT' }
-    ## NO_RULES
+    - { ruleset: 'clash-classic:https://github.com/AKinoYuiko/mihomo-list/raw/main/gfw.txt', group: 'Proxies' }
+    - { ruleset: 'clash-classic:https://github.com/AkinoYuiko/mihomo-list/raw/main/cn.txt', group: 'DIRECT' }
     - { ruleset: '[]MATCH', group: 'Proxies' }
