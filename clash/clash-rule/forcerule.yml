@@ -1,11 +1,8 @@
-port: 7890
-socks-port: 7891
-redir-port: 7892
-mixed-port: 7893
+mixed-port: 7890
 allow-lan: false # 允许局域网连接
 mode: Rule # 规则模式
 log-level: info # 日志级别
-ipv6: true # IPv6开关
+ipv6: false # IPv6开关
 
 # 外部控制器
 external-controller: :9090
@@ -13,11 +10,13 @@ external-controller: :9090
 # DNS设置
 dns:
     enable: true # 禁用系统 DNS
-    ipv6: true # 解析开关 IPv6
+    ipv6: false # 解析开关 IPv6
     listen: 0.0.0.0:1053 # DNS 监听
     nameserver:
-        - quic://223.5.5.5
-        - quic://223.6.6.6
+        - 223.5.5.5
+        - 223.6.6.6
+        # - quic://223.5.5.5
+        # - quic://223.6.6.6
     # 增强模式:fake-ip或redir-host
     enhanced-mode: fake-ip
     # fake-ip:范围和过滤
