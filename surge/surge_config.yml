@@ -1,4 +1,6 @@
 custom:
+    surfboard_rule_base: https://raw.githubusercontent.com/MuXia-0326/rule/master/surge/surfbpard-rule/forcerule.conf
+
     proxy_groups:
         - { name: Proxies, type: select, rule: ['[]HK`[]JP`[]SG`[]TW`[]US`[]OTHER'] }
         - { name: CNTV, type: select, rule: [ '[]DIRECT`[]HK`[]TW' ] }

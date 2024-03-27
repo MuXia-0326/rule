@@ -2,14 +2,15 @@
 # 端口
 DST-PORT,22
 
+# 自己的域名
+DOMAIN-SUFFIX,mossia.top
+DOMAIN-SUFFIX,mossia.xyz
+
 # qq和发卡平台
 DOMAIN,jiema.bai7du.com
 
 # 必应词典
 DOMAIN,cn.bing.com
-
-# 一元机场
-DOMAIN,xn--4gq62f52gdss.com
 
 # 原型地址
 DOMAIN-SUFFIX,axshare.com
