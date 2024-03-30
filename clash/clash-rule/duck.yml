@@ -1,0 +1,20 @@
+mixed-port: 7890
+allow-lan: false # 允许局域网连接
+mode: Rule # 规则模式
+ipv6: true
+log-level: info
+unified-delay: true
+tcp-concurrent: true
+sniffer:
+    enable: true
+    parse-pure-ip: true
+    force-dns-mapping: true
+    override-destination: true
+    skip-domain: [Mijia Cloud]
+    sniff: { HTTP: { ports: [80, 8080] }, TLS: { ports: [443, 8443] }, QUIC: { ports: [443, 8443] } }
+dns:
+    ipv6: true
+    enable: true
+    listen: :1053
+    enhanced-mode: redir-host
+    nameserver: [quic://223.5.5.5, quic://223.6.6.6]

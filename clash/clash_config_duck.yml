@@ -1,0 +1,20 @@
+custom:
+  clash_rule_base: https://raw.githubusercontent.com/MuXia-0326/rule/master/clash/clash-rule/duck.yml
+
+  proxy_groups:
+    - { name: Proxy, type: fallback, rule: [ '[]HK`[]JP`[]SG`[]TW`[]US`[]OTHER' ], url: http://www.gstatic.com/generate_204, interval: 300, tolerance: 100, timeout: 5 }
+    - { name: HK, type: select, rule: [ '香港|HK|🇭🇰' ], url: http://www.gstatic.com/generate_204, interval: 300, tolerance: 100, timeout: 5 }
+    - { name: JP, type: select, rule: [ '日本|JP|🇯🇵' ], url: http://www.gstatic.com/generate_204, interval: 300, tolerance: 100, timeout: 5 }
+    - { name: SG, type: select, rule: [ '新加坡|狮城|SG|🇸🇬' ], url: http://www.gstatic.com/generate_204, interval: 300, tolerance: 100, timeout: 5 }
+    - { name: TW, type: select, rule: [ '台湾|TW|Taiwan' ], url: http://www.gstatic.com/generate_204, interval: 300, tolerance: 100, timeout: 5 }
+    - { name: US, type: select, rule: [ '美国|US|🇺🇸' ], url: http://www.gstatic.com/generate_204, interval: 300, tolerance: 100, timeout: 5 }
+    - { name: DST, type: select, rule: [ '鸭子乐园`[]DIRECT' ], url: http://www.gstatic.com/generate_204, interval: 300, tolerance: 100, timeout: 5 }
+    - { name: OTHER, type: select, rule: [ '^(?!.*(香港|HK|🇭🇰|日本|JP|🇯🇵|新加坡|狮城|SG|🇸🇬|台湾|TW|Taiwan|美国|US|🇺🇸|鸭子乐园|vps)).*' ] }
+
+  rulesets:
+    - { rule: 'DOMAIN-KEYWORD,klei', group: 'DIRECT' }
+    - { rule: 'DOMAIN,dst.ducklantis.com', group: 'DST' }
+    - { ruleset: 'https://github.com/AkinoYuiko/X/raw/main/Surge/Rules/AdBlock.list', group: 'REJECT' }
+    - { ruleset: 'https://github.com/AkinoYuiko/X/raw/main/Surge/Rules/Global.list', group: 'Proxy' }
+    - { ruleset: 'https://github.com/Masaiki/GeoIP2-CN/raw/release/CN-ip-cidr.txt', group: 'DIRECT' }
+    - { ruleset: '[]MATCH', group: 'Proxy' }
