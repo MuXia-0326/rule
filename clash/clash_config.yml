@@ -2,7 +2,7 @@ custom:
   clash_rule_base: https://raw.githubusercontent.com/MuXia-0326/rule/master/clash/clash-rule/forcerule.yml
 
   proxy_groups:
-    - { name: Proxies, type: fallback, rule: [ '[]HK`[]JP`[]SG`[]TW`[]US`[]VPS`[]OTHER' ], url: http://www.gstatic.com/generate_204, interval: 300, tolerance: 100, timeout: 5 }
+    - { name: Proxies, type: fallback, rule: [ '[]HK`[]JP`[]SG`[]TW`[]US`[]OTHER`[]VPS' ], url: http://www.gstatic.com/generate_204, interval: 300, tolerance: 100, timeout: 5 }
     - { name: CNTV, type: select, rule: [ '[]DIRECT`[]HK`[]TW' ] }
     - { name: Youtube, type: select, rule: [ '[]Proxies`[]DIRECT`[]HK`[]JP`[]SG`[]TW`[]US' ] }
     - { name: Discord, type: select, rule: [ '[]Proxies`[]DIRECT`[]HK`[]JP`[]SG`[]TW`[]US' ] }
