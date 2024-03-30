@@ -12,6 +12,6 @@ custom:
     - { name: OTHER, type: select, rule: [ '^(?!.*(香港|HK|🇭🇰|日本|JP|🇯🇵|新加坡|狮城|SG|🇸🇬|台湾|TW|Taiwan|美国|US|🇺🇸|鸭子乐园)).*' ] }
 
   rulesets:
-    - { ruleset: 'https://github.com/AKinoYuiko/mihomo-list/raw/main/gfw.txt', group: 'Proxies' }
-    - { ruleset: 'https://github.com/AkinoYuiko/mihomo-list/raw/main/cn.txt', group: 'DIRECT' }
+    - { ruleset: '[]GEOIP,LAN', group: 'DIRECT' }
+    - { ruleset: '[]GEOIP,CN', group: 'DIRECT' }
     - { ruleset: '[]MATCH', group: 'Proxies' }

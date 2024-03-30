@@ -5,6 +5,6 @@ custom:
     - { name: Proxies, type: url-test, rule: [ '.*' ], url: http://www.gstatic.com/generate_204, interval: 300, tolerance: 100, timeout: 5 }
 
   rulesets:
-    - { ruleset: 'https://github.com/AKinoYuiko/mihomo-list/raw/main/gfw.txt', group: 'Proxies' }
-    - { ruleset: 'https://github.com/AkinoYuiko/mihomo-list/raw/main/cn.txt', group: 'DIRECT' }
+    - { ruleset: '[]GEOIP,LAN', group: 'DIRECT' }
+    - { ruleset: '[]GEOIP,CN', group: 'DIRECT' }
     - { ruleset: '[]MATCH', group: 'Proxies' }
