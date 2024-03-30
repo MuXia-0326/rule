@@ -2,8 +2,7 @@ custom:
   clash_rule_base: https://raw.githubusercontent.com/MuXia-0326/rule/master/clash/clash-rule/forcerule.yml
 
   proxy_groups:
-    - { name: Proxies, type: select, rule: [ '[]VPS' ] }
-    - { name: VPS, type: url-test, rule: [ 'vps-' ], url: http://www.gstatic.com/generate_204, interval: 300, tolerance: 100, timeout: 5 }
+    - { name: Proxies, type: url-test, rule: [ '.*' ], url: http://www.gstatic.com/generate_204, interval: 300, tolerance: 100, timeout: 5 }
 
   rulesets:
     - { ruleset: 'https://github.com/AKinoYuiko/mihomo-list/raw/main/gfw.txt', group: 'Proxies' }
