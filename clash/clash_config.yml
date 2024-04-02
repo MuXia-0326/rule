@@ -40,7 +40,7 @@ custom:
     - { ruleset: 'clash-classic:https://raw.githubusercontent.com/MuXia-0326/rule/master/clash/my-rule/group/DST.yaml', group: 'DST' }
 
     # 开源项目
-    - { ruleset: 'clash-classic:https://raw.githubusercontent.com/Centralmatrix3/Matrix-io/master/Clash/Ruleset/Unbreak.yaml', group: 'DIRECT' }
+    # - { ruleset: 'clash-classic:https://raw.githubusercontent.com/Centralmatrix3/Matrix-io/master/Clash/Ruleset/Unbreak.yaml', group: 'DIRECT' }
     ## 广告
     - { ruleset: 'clash-classic:https://raw.githubusercontent.com/Centralmatrix3/Matrix-io/master/Clash/Ruleset/AdBlock.yaml', group: 'REJECT' }
     ## 国内媒体分流
