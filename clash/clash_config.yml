@@ -2,7 +2,7 @@ custom:
   clash_rule_base: https://raw.githubusercontent.com/MuXia-0326/rule/master/clash/clash-rule/forcerule.yml
 
   proxy_groups:
-    - { name: Proxies, type: url-test, rule: [ '[]HK`[]JP`[]SG`[]TW`[]US`[]OTHER`[]VPS' ], url: http://www.gstatic.com/generate_204, interval: 300, tolerance: 100, timeout: 5 }
+    - { name: Proxies, type: select, rule: [ '[]HK`[]JP`[]SG`[]TW`[]US`[]OTHER`[]VPS' ], url: http://www.gstatic.com/generate_204, interval: 300, tolerance: 100, timeout: 5 }
     - { name: CNTV, type: select, rule: [ '[]DIRECT`[]HK`[]TW' ] }
     - { name: Github, type: select, rule: [ '[]Proxies`[]VPS' ] }
     - { name: Youtube, type: select, rule: [ '[]Proxies`[]DIRECT`[]HK`[]JP`[]SG`[]TW`[]US' ] }
@@ -16,7 +16,7 @@ custom:
     - { name: SG, type: select, rule: [ '新加坡|狮城|SG|🇸🇬' ], url: http://www.gstatic.com/generate_204, interval: 300, tolerance: 100, timeout: 5 }
     - { name: TW, type: select, rule: [ '台湾|TW|Taiwan' ], url: http://www.gstatic.com/generate_204, interval: 300, tolerance: 100, timeout: 5 }
     - { name: US, type: select, rule: [ '美国|US|🇺🇸' ], url: http://www.gstatic.com/generate_204, interval: 300, tolerance: 100, timeout: 5 }
-    - { name: VPS, type: url-test, rule: [ 'vps-' ], url: http://www.gstatic.com/generate_204, interval: 300, tolerance: 100, timeout: 5 }
+    - { name: VPS, type: select, rule: [ 'vps-' ], url: http://www.gstatic.com/generate_204, interval: 300, tolerance: 100, timeout: 5 }
     - { name: DST, type: select, rule: [ '[]DIRECT`鸭子乐园' ], url: http://www.gstatic.com/generate_204, interval: 300, tolerance: 100, timeout: 5 }
     - { name: OTHER, type: select, rule: [ '^(?!.*(香港|HK|🇭🇰|日本|JP|🇯🇵|新加坡|狮城|SG|🇸🇬|台湾|TW|Taiwan|美国|US|🇺🇸|鸭子乐园|vps)).*' ] }
 
