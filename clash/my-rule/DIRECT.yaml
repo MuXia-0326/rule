@@ -13,3 +13,5 @@ payload:
 
   # 原型地址
   - DOMAIN-SUFFIX,axshare.com
+
+  - DOMAIN-SUFFIX,linux.do

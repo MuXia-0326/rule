@@ -4,7 +4,7 @@ custom:
   proxy_groups:
     - { name: Proxies, type: select, rule: [ '[]HK`[]JP`[]SG`[]TW`[]US`[]OTHER`[]VPS' ], url: http://www.gstatic.com/generate_204, interval: 300, tolerance: 100, timeout: 5 }
     - { name: CNTV, type: select, rule: [ '[]DIRECT`[]HK`[]TW' ] }
-    - { name: Github, type: select, rule: [ '[]Proxies`[]VPS' ] }
+    - { name: Application, type: select, rule: [ '[]Proxies`[]VPS' ] }
     - { name: Youtube, type: select, rule: [ '[]Proxies`[]DIRECT`[]HK`[]JP`[]SG`[]TW`[]US' ] }
     - { name: Discord, type: select, rule: [ '[]Proxies`[]DIRECT`[]HK`[]JP`[]SG`[]TW`[]US' ] }
     - { name: Telegram, type: select, rule: [ '实验性|日用`[]VPS`[]Proxies' ] }
@@ -41,7 +41,15 @@ custom:
     - { ruleset: 'clash-classic:https://raw.githubusercontent.com/MuXia-0326/rule/master/clash/my-rule/group/DST.yaml', group: 'DST' }
 
     # 高优先级
-    - { ruleset: 'clash-classic:https://raw.githubusercontent.com/Centralmatrix3/Matrix-io/master/Clash/Ruleset/GitHub.yaml', group: 'Github'  }
+    - { rule: 'DOMAIN-SUFFIX,v2ex.com', group: 'Application' }
+    - { rule: 'DOMAIN-SUFFIX,mikanani.me', group: 'Application' }
+    - { rule: 'DOMAIN,hellogithub.com', group: 'Application' }
+    - { rule: 'DOMAIN,o1098464.ingest.sentry.io', group: 'Application' }
+    - { ruleset: 'clash-classic:https://raw.githubusercontent.com/Centralmatrix3/Matrix-io/master/Clash/Ruleset/GitHub.yaml', group: 'Application'  }
+    - { ruleset: 'clash-classic:https://raw.githubusercontent.com/Centralmatrix3/Matrix-io/master/Clash/Ruleset/Docker.yaml', group: 'Application'  }
+    - { ruleset: 'clash-classic:https://raw.githubusercontent.com/Centralmatrix3/Matrix-io/master/Clash/Ruleset/Pixiv.yaml', group: 'Application'  }
+    - { ruleset: 'clash-classic:https://raw.githubusercontent.com/Centralmatrix3/Matrix-io/master/Clash/Ruleset/Microsoft.yaml', group: 'Application'  }
+    - { ruleset: 'clash-classic:https://raw.githubusercontent.com/Centralmatrix3/Matrix-io/master/Clash/Ruleset/OneDrive.yaml', group: 'Application'  }
 
     # 开源项目
     # - { ruleset: 'clash-classic:https://raw.githubusercontent.com/Centralmatrix3/Matrix-io/master/Clash/Ruleset/Unbreak.yaml', group: 'DIRECT' }
