@@ -41,7 +41,7 @@ custom:
     - { ruleset: 'clash-classic:https://raw.githubusercontent.com/MuXia-0326/rule/master/clash/my-rule/group/DST.yaml', group: 'DST' }
 
     # 高优先级
-    - { rule: 'SRC-IP-CIDR,192.168.31.31/21', group: 'Application' }
+    - { rule: 'SRC-IP-CIDR,192.168.31.21/32', group: 'Application' }
     - { rule: 'SRC-IP-CIDR,192.168.31.31/32', group: 'Application' }
     - { rule: 'SRC-IP-CIDR,192.168.31.34/32', group: 'Application' }
 
