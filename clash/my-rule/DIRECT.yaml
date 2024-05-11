@@ -17,7 +17,7 @@ payload:
   - DOMAIN-SUFFIX,linux.do
 
   # githubcopilot
-  - DOMAIN,api.github.com
-  - DOMAIN,api.githubcopilot.com
-  - DOMAIN,copilot-proxy.githubusercontent.com
-  - DOMAIN,codex.micosoft.icu
+  # - DOMAIN,api.github.com
+  # - DOMAIN,api.githubcopilot.com
+  # - DOMAIN,copilot-proxy.githubusercontent.com
+  # - DOMAIN,codex.micosoft.icu
