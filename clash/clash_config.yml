@@ -62,7 +62,7 @@ custom:
     - { ruleset: 'clash-classic:https://raw.githubusercontent.com/Centralmatrix3/Matrix-io/master/Clash/Ruleset/Telegram.yaml', group: 'Telegram' }
     ## OpenAI 分流
     # - { ruleset: 'clash-classic:https://raw.githubusercontent.com/Centralmatrix3/Matrix-io/master/Clash/Ruleset/OpenAI.yaml', group: 'OpenAI' }
-    - { ruleset: 'https://raw.githubusercontent.com/AkinoYuiko/rules/main/OpenAI.list', group: 'OpenAI' }
+    - { ruleset: 'https://raw.githubusercontent.com/AkinoYuiko/rules/main/AI.list', group: 'OpenAI' }
     ## Global.list - 国际网络分流
     - { ruleset: 'clash-classic:https://raw.githubusercontent.com/Centralmatrix3/Matrix-io/master/Clash/Ruleset/Global.yaml', group: 'Proxies' }
     ## 游戏下载分流
