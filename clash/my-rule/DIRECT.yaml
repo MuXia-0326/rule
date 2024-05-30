@@ -14,7 +14,7 @@ payload:
   # 原型地址
   - DOMAIN-SUFFIX,axshare.com
 
-  - DOMAIN-SUFFIX,linux.do
+  #- DOMAIN-SUFFIX,linux.do
 
   # githubcopilot
-  - DOMAIN-SUFFIX,cocopilot.org
+  #- DOMAIN-SUFFIX,cocopilot.org
