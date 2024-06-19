@@ -1,0 +1,10 @@
+custom:
+  clash_rule_base: https://raw.githubusercontent.com/MuXia-0326/rule/master/clash/clash-rule/duck.yml
+
+  proxy_groups:
+    - { name: DST, type: select, rule: [ '鸭子乐园`[]DIRECT' ], url: http://www.gstatic.com/generate_204, interval: 300, tolerance: 100, timeout: 5 }
+
+  rulesets:
+    - { rule: 'DOMAIN-KEYWORD,klei', group: 'DIRECT' }
+    - { rule: 'DOMAIN,dst.ducklantis.com', group: 'DST' }
+    - { ruleset: '[]MATCH', group: 'DIRECT' }

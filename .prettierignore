@@ -2,4 +2,5 @@ clash/clash_config.yml
 clash/clash_config_mini.yml
 clash/clash_config_vps.yml
 clash/clash_config_duck.yml
+clash/clash_config_dst.yml
 surge/surge_config.yml
