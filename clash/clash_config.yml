@@ -4,6 +4,7 @@ custom:
   proxy_groups:
     - { name: Proxies, type: select, rule: [ '[]HK`[]JP`[]SG`[]TW`[]US`[]OTHER`[]VPS' ], url: http://www.gstatic.com/generate_204, interval: 300, tolerance: 100, timeout: 5 }
     - { name: CNTV, type: select, rule: [ '[]DIRECT`[]HK`[]TW' ] }
+    - { name: cocopilot, type: select, rule: [ '[]Proxies`[]HK`[]JP`[]SG`[]TW`[]US`[]OTHER`[]VPS`[]DIRECT' ] }
     - { name: Application, type: select, rule: [ '[]Proxies`[]VPS' ] }
     - { name: Youtube, type: select, rule: [ '[]Proxies`[]DIRECT`[]HK`[]JP`[]SG`[]TW`[]US' ] }
     - { name: Discord, type: select, rule: [ '[]Proxies`[]DIRECT`[]HK`[]JP`[]SG`[]TW`[]US' ] }
@@ -39,6 +40,7 @@ custom:
     - { ruleset: 'clash-classic:https://raw.githubusercontent.com/MuXia-0326/rule/master/clash/my-rule/PROXY.yaml', group: 'Proxies' }
     - { ruleset: 'clash-classic:https://raw.githubusercontent.com/MuXia-0326/rule/master/clash/my-rule/group/switch.yaml', group: 'Nintendo' }
     - { ruleset: 'clash-classic:https://raw.githubusercontent.com/MuXia-0326/rule/master/clash/my-rule/group/DST.yaml', group: 'DST' }
+    - { ruleset: 'clash-classic:https://raw.githubusercontent.com/MuXia-0326/rule/master/clash/my-rule/group/cocopilot.yml', group: 'cocopilot' }
 
     # 高优先级
     - { rule: 'SRC-IP-CIDR,192.168.31.21/32', group: 'Application' }
