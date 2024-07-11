@@ -4,6 +4,7 @@ payload:
 
   # 自己的域名
   - DOMAIN-SUFFIX,mossia.top
+  - DOMAIN-SUFFIX,9990326.xyz
 
   # qq和发卡平台
   - DOMAIN,jiema.bai7du.com
