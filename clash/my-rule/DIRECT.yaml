@@ -16,6 +16,7 @@ payload:
   - DOMAIN-SUFFIX,axshare.com
 
   #- DOMAIN-SUFFIX,linux.do
+  - DOMAIN-SUFFIX,oaifree.com
 
   # githubcopilot
   #- DOMAIN-SUFFIX,cocopilot.org
