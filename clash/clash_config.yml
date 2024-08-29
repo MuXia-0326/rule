@@ -18,7 +18,6 @@ custom:
     - { name: TW, type: select, rule: [ '台湾|TW|Taiwan' ], url: http://www.gstatic.com/generate_204, interval: 300, tolerance: 100, timeout: 5 }
     - { name: US, type: select, rule: [ '美国|US|🇺🇸' ], url: http://www.gstatic.com/generate_204, interval: 300, tolerance: 100, timeout: 5 }
     - { name: VPS, type: select, rule: [ 'vps-' ], url: http://www.gstatic.com/generate_204, interval: 300, tolerance: 100, timeout: 5 }
-    - { name: YXVM, type: select, rule: [ 'vps-hk-yxvm' ], url: http://www.gstatic.com/generate_204, interval: 300, tolerance: 100, timeout: 5 }
     - { name: DST, type: select, rule: [ '[]DIRECT`鸭子乐园' ], url: http://www.gstatic.com/generate_204, interval: 300, tolerance: 100, timeout: 5 }
     - { name: OTHER, type: select, rule: [ '^(?!.*(香港|HK|🇭🇰|日本|JP|🇯🇵|新加坡|狮城|SG|🇸🇬|台湾|TW|Taiwan|美国|US|🇺🇸|鸭子乐园|vps)).*' ] }
 
@@ -36,7 +35,7 @@ custom:
     # - { rule: 'AND,((SRC-IP-CIDR,192.168.31.31/32),(DOMAIN-SUFFIX,cloudfront.net))', group: 'Proxies' }
 
     # yxvm 特化规则
-    - { rule: 'DOMAIN-SUFFIX,yxvm.com', group: 'YXVM' }
+    - { rule: 'DOMAIN-SUFFIX,yxvm.com', group: 'DIRECT' }
 
     # 自用
     - { ruleset: 'clash-classic:https://raw.githubusercontent.com/MuXia-0326/rule/master/clash/my-rule/DIRECT.yaml', group: 'DIRECT' }
