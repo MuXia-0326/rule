@@ -46,6 +46,8 @@ custom:
     - { ruleset: 'clash-classic:https://raw.githubusercontent.com/MuXia-0326/rule/master/clash/my-rule/group/cocopilot.yml', group: 'cocopilot' }
 
     # 高优先级
+    - { rule: 'AND,((SRC-IP-CIDR,192.168.31.31/32),(DOMAIN-SUFFIX,mossia.top))', group: 'Application' }
+    - { rule: 'AND,((SRC-IP-CIDR,192.168.31.31/32),(DOMAIN-SUFFIX,9990326.xyz))', group: 'Application' }
     - { rule: 'SRC-IP-CIDR,192.168.31.21/32', group: 'Application' }
     - { rule: 'SRC-IP-CIDR,192.168.31.31/32', group: 'Application' }
     - { rule: 'SRC-IP-CIDR,192.168.31.34/32', group: 'Application' }
