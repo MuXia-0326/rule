@@ -3,12 +3,11 @@ custom:
 
   proxy_groups:
     - { name: Proxies, type: select, rule: [ '[]HK`[]JP`[]SG`[]TW`[]US`[]OTHER`[]VPS' ], url: http://www.gstatic.com/generate_204, interval: 300, tolerance: 100, timeout: 5 }
-    - { name: CNTV, type: select, rule: [ '[]DIRECT`[]HK`[]TW' ] }
-    - { name: cocopilot, type: select, rule: [ '[]Proxies`[]HK`[]JP`[]SG`[]TW`[]US`[]OTHER`[]VPS`[]DIRECT' ] }
-    - { name: Application, type: select, rule: [ '[]Proxies`[]VPS' ] }
-    - { name: Youtube, type: select, rule: [ '[]Proxies`[]DIRECT`[]HK`[]JP`[]SG`[]TW`[]US' ] }
-    - { name: Discord, type: select, rule: [ '[]Proxies`[]DIRECT`[]HK`[]JP`[]SG`[]TW`[]US' ] }
-    - { name: Telegram, type: select, rule: [ '实验性|日用`[]VPS`[]Proxies' ] }
+    - { name: cocopilot, type: select, rule: [ 'vps-`[]DIRECT' ] }
+    - { name: Application, type: select, rule: [ '[]VPS`[]Proxies' ] }
+    - { name: Youtube, type: select, rule: [ '[]Proxies`[]HK`[]JP`[]SG`[]TW`[]US' ] }
+    - { name: Discord, type: select, rule: [ '[]Proxies`[]HK`[]JP`[]SG`[]TW`[]US' ] }
+    - { name: Telegram, type: select, rule: [ '实验性|vps-`[]Proxies' ] }
     - { name: OpenAI, type: select, rule: [ '[]JP`[]SG`[]US' ] }
     - { name: GamePlatform, type: select, rule: [ '[]Proxies`[]DIRECT`[]HK`[]JP`[]SG`[]TW`[]US' ] }
     - { name: Nintendo, type: select, rule: [ '[]Proxies`[]DIRECT`[]HK`[]JP`[]SG`[]TW`[]US' ] }
@@ -17,9 +16,9 @@ custom:
     - { name: SG, type: select, rule: [ '新加坡|狮城|SG|🇸🇬' ], url: http://www.gstatic.com/generate_204, interval: 300, tolerance: 100, timeout: 5 }
     - { name: TW, type: select, rule: [ '台湾|TW|Taiwan' ], url: http://www.gstatic.com/generate_204, interval: 300, tolerance: 100, timeout: 5 }
     - { name: US, type: select, rule: [ '美国|US|🇺🇸' ], url: http://www.gstatic.com/generate_204, interval: 300, tolerance: 100, timeout: 5 }
+    - { name: OTHER, type: select, rule: [ '^(?!.*(香港|HK|🇭🇰|日本|JP|🇯🇵|新加坡|狮城|SG|🇸🇬|台湾|TW|Taiwan|美国|US|🇺🇸|鸭子乐园|vps)).*' ] }
     - { name: VPS, type: select, rule: [ 'vps-' ], url: http://www.gstatic.com/generate_204, interval: 300, tolerance: 100, timeout: 5 }
     - { name: DST, type: select, rule: [ '[]DIRECT`鸭子乐园' ], url: http://www.gstatic.com/generate_204, interval: 300, tolerance: 100, timeout: 5 }
-    - { name: OTHER, type: select, rule: [ '^(?!.*(香港|HK|🇭🇰|日本|JP|🇯🇵|新加坡|狮城|SG|🇸🇬|台湾|TW|Taiwan|美国|US|🇺🇸|鸭子乐园|vps)).*' ] }
 
   rulesets:
     # mihomo 特有的逻辑规则
@@ -56,9 +55,6 @@ custom:
     # - { ruleset: 'clash-classic:https://raw.githubusercontent.com/Centralmatrix3/Matrix-io/master/Clash/Ruleset/Unbreak.yaml', group: 'DIRECT' }
     ## 广告
     - { ruleset: 'clash-classic:https://raw.githubusercontent.com/Centralmatrix3/Matrix-io/master/Clash/Ruleset/AdBlock.yaml', group: 'REJECT' }
-    ## 国内媒体分流
-    - { ruleset: 'clash-classic:https://raw.githubusercontent.com/Centralmatrix3/Matrix-io/master/Clash/Ruleset/StreamingCN.yaml', group: 'CNTV' }
-    - { ruleset: 'clash-classic:https://raw.githubusercontent.com/Centralmatrix3/Matrix-io/master/Clash/Ruleset/StreamingSE.yaml', group: 'CNTV' }
     ## youtube 分流
     - { ruleset: 'clash-classic:https://raw.githubusercontent.com/Centralmatrix3/Matrix-io/master/Clash/Ruleset/YouTube.yaml', group: 'Youtube' }
     ## discord 分流
