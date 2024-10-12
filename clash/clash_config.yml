@@ -5,8 +5,8 @@ custom:
     - { name: Proxies, type: select, rule: [ '[]HK`[]JP`[]SG`[]TW`[]US`[]OTHER`[]VPS' ], url: http://www.gstatic.com/generate_204, interval: 300, tolerance: 100, timeout: 5 }
     - { name: cocopilot, type: select, rule: [ 'vps-`[]DIRECT' ] }
     - { name: Application, type: select, rule: [ '[]VPS`[]Proxies' ] }
-    - { name: Youtube, type: select, rule: [ '[]Proxies`[]HK`[]JP`[]SG`[]TW`[]US' ] }
-    - { name: Discord, type: select, rule: [ '[]Proxies`[]HK`[]JP`[]SG`[]TW`[]US' ] }
+    - { name: Youtube, type: select, rule: [ '[]Proxies`[]HK`[]JP`[]SG`[]TW`[]US`[]VPS' ] }
+    - { name: Discord, type: select, rule: [ '[]Proxies`[]HK`[]JP`[]SG`[]TW`[]US`[]VPS' ] }
     - { name: Telegram, type: select, rule: [ '实验性|vps-`[]Proxies' ] }
     - { name: OpenAI, type: select, rule: [ '[]JP`[]SG`[]US' ] }
     - { name: GamePlatform, type: select, rule: [ '[]Proxies`[]DIRECT`[]HK`[]JP`[]SG`[]TW`[]US' ] }
